@@ -136,11 +136,6 @@
       .btn:active {
         transform: scale(0.96);
       }
-      .btn.ghost {
-        background: transparent;
-        color: var(--g);
-        box-shadow: inset 0 0 0 1.5px var(--g);
-      }
       .actions {
         display: flex;
         flex-wrap: wrap;
@@ -582,6 +577,46 @@
       }
       #intro.ready {
         cursor: pointer;
+      }
+
+      /* scroll cue on the invitation card: two chevrons drift down, staggered */
+      .scroll-cue {
+        position: absolute;
+        left: 50%;
+        bottom: calc(env(safe-area-inset-bottom) + 14px);
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+        color: var(--gold);
+      }
+      .scroll-cue svg {
+        width: 22px;
+        height: 22px;
+        margin-top: -10px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: cue 1.8s var(--ease) infinite;
+      }
+      .scroll-cue svg:last-child {
+        animation-delay: 0.25s;
+      }
+      @keyframes cue {
+        0% {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+        40% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(6px);
+        }
       }
 
       /* ============ POP-OUT FRAMES ============
@@ -1275,9 +1310,13 @@
               <a class="btn" id="dirLink" target="_blank" rel="noopener"
                 >Xem chỉ đường</a
               >
-              <button class="btn ghost" data-ics>Thêm vào lịch</button>
             </div>
           </article>
+        </div>
+        <!-- scroll cue: two chevrons drifting down, decorative only -->
+        <div class="scroll-cue" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
         </div>
       </section>
 
@@ -1884,45 +1923,6 @@
       }
       tick();
       setInterval(tick, 1000);
-
-      // ---- add to calendar (.ics) ----
-      const icsEsc = (s) => s.replace(/([,;\\])/g, "\\$1");
-      const icsDate = (d) =>
-        d.toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
-      function downloadIcs() {
-        const day = CFG.date.replaceAll("-", "");
-        const nextDay = new Date(Date.parse(CFG.date + "T00:00:00Z") + 864e5)
-          .toISOString()
-          .slice(0, 10)
-          .replaceAll("-", "");
-        const when = CFG.time
-          ? [
-              `DTSTART:${icsDate(target)}`,
-              `DTEND:${icsDate(new Date(+target + 3 * 36e5))}`,
-            ]
-          : [`DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${nextDay}`];
-        const txt = [
-          "BEGIN:VCALENDAR",
-          "VERSION:2.0",
-          "PRODID:-//thiep-tot-nghiep//VI",
-          "BEGIN:VEVENT",
-          `UID:tot-nghiep-anh-thu-${day}@thiep`,
-          `DTSTAMP:${icsDate(new Date())}`,
-          ...when,
-          `SUMMARY:${icsEsc("🎓 " + CFG.title)}`,
-          `LOCATION:${icsEsc(CFG.place)}`,
-          "END:VEVENT",
-          "END:VCALENDAR",
-        ].join("\r\n");
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(
-          new Blob([txt], { type: "text/calendar" }),
-        );
-        a.download = "le-tot-nghiep-anh-thu.ics";
-        a.click();
-        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-      }
-      $$("[data-ics]").forEach((b) => (b.onclick = downloadIcs));
 
       // ---- RSVP + guestbook → Google Sheet (see apps-script/Code.gs) ----
       const form = $("#gb"),
