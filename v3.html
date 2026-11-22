@@ -1,0 +1,1898 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Thư mời tốt nghiệp · Anh Thư</title>
+    <meta
+      name="description"
+      content="Nguyễn Trúc Anh Thư trân trọng mời bạn đến dự lễ tốt nghiệp ngày 04/12/2026."
+    />
+    <meta property="og:title" content="Thư mời tốt nghiệp · Anh Thư" />
+    <meta property="og:description" content="Mở thiệp để xem lời mời nhé!" />
+    <meta property="og:image" content="assets/hero-nguoi.webp" />
+    <meta name="theme-color" content="#FFF8E7" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/v3/hero-nguoi.webp" />
+    <style>
+      :root {
+        --bg: #fff8e7;
+        --g: #004225;
+        --g2: #0b5a35;
+        --gold: #b8913a;
+        --gold-l: #e4cb86;
+        --ink: #1e2b23;
+        --muted: #6e6b5c;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+        --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        scroll-snap-type: y mandatory;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          400 15px/1.6 "Be Vietnam Pro",
+          system-ui,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      body.locked {
+        overflow: hidden;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      [hidden] {
+        display: none !important;
+      } /* the img rule above would otherwise beat the UA [hidden] style */
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      :focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      .script {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        line-height: 1.15;
+      }
+      .serif {
+        font-family: "Cormorant Garamond", Georgia, serif;
+      }
+      .kicker {
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .body {
+        color: var(--muted);
+        max-width: 30ch;
+        margin-inline: auto;
+      }
+      .orn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 12px;
+        margin: 18px auto;
+      }
+      .orn::before,
+      .orn::after {
+        content: "";
+        width: 56px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold));
+      }
+      .orn::after {
+        transform: scaleX(-1);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 0;
+        background: var(--g);
+        color: var(--bg);
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        box-shadow:
+          0 10px 24px -12px rgb(0 66 37/0.7),
+          inset 0 1px 0 rgb(255 255 255/0.15);
+        transition: transform 0.3s var(--spring);
+      }
+      .btn:active {
+        transform: scale(0.96);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--g);
+        box-shadow: inset 0 0 0 1.5px var(--g);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 22px;
+      }
+
+      main {
+        max-width: 480px;
+        margin: 0 auto;
+        overflow-x: clip;
+      }
+      /* one section = one screen. Content sits in .fit; on short phones JS zooms .fit down so nothing spills over */
+      .sec {
+        position: relative;
+        isolation: isolate;
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: calc(env(safe-area-inset-top) + 64px) 20px
+          calc(env(safe-area-inset-bottom) + 24px);
+        text-align: center;
+        overflow: hidden;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      .sec.grow {
+        height: auto;
+        min-height: 100svh;
+        justify-content: flex-start;
+        overflow: visible;
+        scroll-snap-stop: normal;
+      }
+      .fit {
+        width: 100%;
+      }
+      /* faded school photo behind each section */
+      .sec::before,
+      #intro::before,
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--mo) center/cover;
+        opacity: 0.16;
+        filter: sepia(0.35) saturate(0.7);
+        -webkit-mask: linear-gradient(
+          transparent,
+          #000 18%,
+          #000 82%,
+          transparent
+        );
+        mask: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+      }
+
+      /* ============ INTRO: tear the envelope, unfold the letter ============ */
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        isolation: isolate;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 26px;
+        padding: 24px;
+        text-align: center;
+        background: var(--bg);
+        overflow: hidden;
+        transition: opacity 0.9s ease;
+      }
+      #intro::before {
+        opacity: 0.24;
+        -webkit-mask: none;
+        mask: none;
+      }
+      #intro::after {
+        content: "";
+        position: absolute;
+        inset: 14px;
+        border: 1px solid rgb(184 145 58/0.55);
+        outline: 1px solid rgb(184 145 58/0.3);
+        outline-offset: -6px;
+        pointer-events: none;
+      }
+      #intro.done {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .intro-head .script {
+        font-size: min(11vw, 46px);
+        color: var(--g);
+        margin-top: 2px;
+      }
+      .intro-hint {
+        font-size: 13px;
+        color: var(--muted);
+        transition: opacity 0.4s;
+      }
+      #intro.torn .intro-head,
+      #intro.torn .intro-hint {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .intro-head {
+        transition: opacity 0.5s;
+      }
+
+      .stage {
+        --w: min(340px, 84vw);
+        position: relative;
+        width: var(--w);
+        height: calc(var(--w) * 0.72);
+        perspective: 1400px;
+        touch-action: none;
+        cursor: grab;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .stage:focus-visible {
+        outline-offset: 10px;
+        border-radius: 16px;
+      }
+      .stage > * {
+        position: absolute;
+      }
+      .stage::after {
+        content: "";
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        bottom: -26px;
+        height: 22px;
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgb(0 40 20/0.28),
+          transparent
+        );
+        transition: opacity 0.6s;
+      }
+      .eb {
+        transition:
+          translate 1s cubic-bezier(0.55, 0, 0.75, 0.2),
+          opacity 0.9s ease 0.1s;
+      }
+      #intro.leave .eb {
+        translate: 0 70svh;
+        opacity: 0;
+      }
+      #intro.leave .stage::after {
+        opacity: 0;
+      }
+
+      .e-back {
+        left: 0;
+        right: 0;
+        top: 14%;
+        bottom: 0;
+        z-index: 1;
+        border-radius: 0 0 14px 14px;
+        background: linear-gradient(#d9c69e, #e6d6b3 40%);
+        clip-path: var(--zig-top);
+      }
+      .e-front {
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        z-index: 3;
+        border-radius: 0 0 14px 14px;
+        clip-path: var(--zig-top);
+        background: linear-gradient(170deg, #f7ecd4, #efe0c0);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 20px 20px;
+        text-align: left;
+      }
+      .e-front::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border: 5px solid;
+        pointer-events: none;
+        border-image: repeating-linear-gradient(
+            -45deg,
+            var(--g) 0 7px,
+            transparent 7px 12px,
+            var(--gold) 12px 19px,
+            transparent 19px 24px
+          )
+          5;
+      }
+      .addr small {
+        display: block;
+        font:
+          italic 500 15px/1 "Cormorant Garamond",
+          serif;
+        color: var(--muted);
+      }
+      .addr b {
+        display: block;
+        font:
+          400 min(9vw, 36px)/1.2 "Great Vibes",
+          cursive;
+        color: var(--g);
+        max-width: 9em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .stamp {
+        position: relative;
+        width: 50px;
+        height: 60px;
+        margin-bottom: auto;
+        margin-top: 22px;
+        display: grid;
+        place-content: center;
+        gap: 2px;
+        background: var(--g);
+        color: var(--gold-l);
+        font:
+          600 12px/1 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.08em;
+        text-align: center;
+        outline: 2px dashed #f7ecd4;
+        outline-offset: -5px;
+        box-shadow:
+          0 0 0 3px #f7ecd4,
+          0 0 0 4px rgb(0 66 37/0.25);
+      }
+      .stamp i {
+        font-style: normal;
+        font-size: 20px;
+      }
+      .postmark {
+        position: absolute;
+        right: 66px;
+        top: 34px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1.5px solid rgb(0 66 37/0.45);
+        display: grid;
+        place-content: center;
+        font:
+          600 10px/1.2 "Be Vietnam Pro",
+          sans-serif;
+        color: rgb(0 66 37/0.6);
+        letter-spacing: 0.06em;
+        rotate: -14deg;
+      }
+
+      /* tear strip: the attached part is clipped from the left as --t grows; .peel is the torn-off part curling up */
+      .strip-wrap,
+      .peel {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 24%;
+        z-index: 4;
+      }
+      .strip-wrap {
+        clip-path: inset(-20px 0 -20px var(--t, 0%));
+      }
+      .peel {
+        z-index: 5;
+        clip-path: inset(-40px calc(100% - var(--t, 0%)) -20px -20px);
+        transform-origin: var(--t, 0%) 100%;
+        transform: rotate(calc(var(--k, 0) * -14deg))
+          translateY(calc(var(--k, 0) * -10px));
+      }
+      .strip {
+        position: absolute;
+        inset: 0;
+        border-radius: 14px 14px 0 0;
+        background: linear-gradient(#f9f0dc, #f2e5c8);
+        clip-path: var(--zig-bot);
+        display: grid;
+        place-content: center;
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        text-transform: uppercase;
+      }
+      .strip::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 9px;
+        border-bottom: 1.5px dashed rgb(184 145 58/0.7);
+      }
+      .strip .dot {
+        position: absolute;
+        left: 8%;
+        bottom: 4px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 0 5px rgb(184 145 58/0.25);
+        animation: swipe 2.2s var(--ease) infinite;
+      }
+      #intro.tearing .dot,
+      .peel .dot {
+        display: none;
+      }
+      #intro.torn .peel {
+        transition:
+          transform 0.8s cubic-bezier(0.3, 0.6, 0.4, 1),
+          opacity 0.8s;
+        transform: translate(30%, -160%) rotate(-28deg);
+        opacity: 0;
+      }
+
+      /* letter: the "Graduation Ceremony" cover. It rises out of the envelope, then grows to full height */
+      .letter {
+        --h: min(560px, 78svh);
+        left: 5%;
+        right: 5%;
+        top: 17%;
+        height: calc(var(--w) * 0.5);
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #fffdf6;
+        box-shadow: 0 2px 8px rgb(74 58 48/0.15);
+        transition:
+          transform 1s cubic-bezier(0.3, 0.7, 0.3, 1),
+          height 1.1s cubic-bezier(0.5, 0, 0.2, 1);
+      }
+      #intro.rise .letter {
+        transform: translateY(calc(var(--w) * -0.5));
+      }
+      #intro.leave .letter {
+        z-index: 6;
+        transform: translateY(calc(var(--w) * -0.01));
+      }
+      #intro.unfold .letter {
+        height: var(--h);
+        transform: translateY(calc(var(--w) * 0.2376 - var(--h) / 2));
+        box-shadow: 0 30px 50px -24px rgb(74 58 48/0.45);
+      }
+      #intro.done .letter {
+        transform: translateY(calc(var(--w) * 0.2376 - var(--h) / 2))
+          scale(1.06);
+        transition-duration: 0.9s;
+      }
+      /* the gold frame sits 10px in; title and photo are pinned from the top so they stay still while the letter grows */
+      .l-hero {
+        position: absolute;
+        inset: 10px;
+        overflow: hidden;
+        border: 1px solid rgb(184 145 58/0.6);
+        text-align: center;
+      }
+      .l-title {
+        position: relative;
+        z-index: 1;
+        padding-top: 20px;
+        font-size: min(12vw, 46px);
+        line-height: 1;
+        color: var(--g);
+      }
+      .l-hero img {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: calc(var(--h) * 0.17);
+        height: calc(var(--h) * 0.84);
+        width: auto;
+        max-width: none;
+        translate: -50% 0;
+      }
+      .l-foot {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        /* pinned to where the frame's bottom WILL be (letter height minus the 2×10px inset), so it's hidden until the letter has grown */
+        top: calc(var(--h) - 20px);
+        translate: 0 -100%;
+        padding: 70px 10px 16px;
+        background: linear-gradient(rgb(255 253 246/0), #fffdf6 55%);
+      }
+      .l-foot .full {
+        font:
+          600 15px/1.2 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--g);
+      }
+      .l-foot .orn {
+        margin: 6px auto;
+      }
+      .l-foot .sub {
+        font-size: 10.5px;
+        color: var(--muted);
+      }
+      .open-hint {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(env(safe-area-inset-bottom) + 4svh);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--g);
+        opacity: 0;
+        transition: opacity 0.6s;
+      }
+      .open-hint i {
+        display: inline-block;
+        font-style: normal;
+        animation: tap 1.4s ease-in-out infinite;
+      }
+      #intro.ready .open-hint {
+        opacity: 1;
+      }
+      #intro.ready {
+        cursor: pointer;
+      }
+
+      /* ============ POP-OUT FRAMES ============
+   bg and person are cropped from the same box, so they stack pixel-aligned.
+   Only the bg is clipped to the frame; the person isn't, so she steps out of it. */
+      .pop {
+        position: relative;
+        margin: 0 auto;
+      }
+      .pop > * {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .pop .bg {
+        clip-path: var(--c);
+        transform: translateY(calc(var(--py, 0) * 10px));
+        filter: saturate(0.92);
+      }
+      .pop .line {
+        border: 1.5px solid var(--gold);
+      }
+      .pop .ppl {
+        transform: translateY(calc(var(--py, 0) * -14px));
+        filter: drop-shadow(0 14px 18px rgb(0 40 20/0.25));
+      }
+      .js .pop .bg {
+        transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      .js .pop .ppl {
+        transition:
+          opacity 0.9s var(--ease) 0.5s,
+          translate 1.3s var(--spring) 0.5s;
+      }
+      .js .pop .line {
+        transition:
+          opacity 1s ease 1s,
+          scale 1s var(--ease) 1s;
+      }
+      .js .pop:not(.in) .bg {
+        clip-path: var(--c0);
+      }
+      .js .pop:not(.in) .ppl {
+        opacity: 0;
+        translate: 0 9%;
+      }
+      .js .pop:not(.in) .line {
+        opacity: 0;
+        scale: 0.96;
+      }
+
+      .arch {
+        width: 84%;
+        --c: inset(24% 9% 0 9% round 999px 999px 0 0);
+        --c0: inset(100% 9% 0 9% round 999px 999px 0 0);
+      }
+      .arch .line {
+        inset: calc(24% - 9px) calc(9% - 9px) -9px;
+        width: auto;
+        height: auto;
+        border-bottom: 0;
+        border-radius: 999px 999px 0 0;
+      }
+      /* tall: she stands inside the photo and her dress steps out below the frame */
+      .tall {
+        width: 92%;
+        --c: inset(0 6% 16% 6% round 26px);
+        --c0: inset(0 6% 100% 6% round 26px);
+      }
+      .tall .line {
+        inset: -8px calc(6% - 8px) calc(16% - 8px);
+        width: auto;
+        height: auto;
+        border-radius: 34px;
+      }
+      .round {
+        width: 96%;
+        --c: circle(37% at 50% 62%);
+        --c0: circle(0% at 50% 62%);
+      }
+      .round .line {
+        left: calc(13% - 9px);
+        top: calc(25% - 9px);
+        width: calc(74% + 18px);
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+      .round .ppl {
+        -webkit-mask: linear-gradient(#000 84%, transparent);
+        mask: linear-gradient(#000 84%, transparent);
+      }
+
+      /* generic reveal */
+      .js .r {
+        transition:
+          opacity 1s var(--ease),
+          translate 1s var(--ease);
+      }
+      .js .r:not(.in) {
+        opacity: 0;
+        translate: 0 26px;
+      }
+      /* handwriting wipe; a mask (not clip-path) because a fully clipped element never reports as intersecting */
+      .js .script.r {
+        padding: 0.12em 0.3em;
+        margin-inline: -0.3em;
+        -webkit-mask: linear-gradient(90deg, #000 40%, transparent 60%) 0 0/250%
+          100% no-repeat;
+        mask: linear-gradient(90deg, #000 40%, transparent 60%) 0 0/250% 100%
+          no-repeat;
+        transition:
+          -webkit-mask-position 1.8s cubic-bezier(0.6, 0, 0.2, 1),
+          mask-position 1.8s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+      .js .script.r:not(.in) {
+        opacity: 1;
+        translate: none;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+
+      /* ============ SECTIONS ============ */
+      .lead {
+        font-size: min(11vw, 50px);
+        color: var(--g);
+      }
+
+      /* page 2: the invitation card, same paper + gold frame as the letter from the envelope */
+      .card {
+        position: relative;
+        padding: 42px 24px 36px;
+        border-radius: 18px;
+        background: #fffdf6;
+        box-shadow:
+          inset 0 0 0 12px #fffdf6,
+          inset 0 0 0 13px rgb(184 145 58/0.6),
+          0 24px 40px -24px rgb(0 40 20/0.35);
+      }
+      .card .to-guest {
+        font-size: min(10vw, 44px);
+        color: var(--g);
+        margin: 6px 0 4px;
+      }
+      .c-small {
+        font:
+          italic 500 17px/1.4 "Cormorant Garamond",
+          serif;
+        color: var(--muted);
+      }
+      .c-name {
+        font:
+          600 21px/1.25 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--g);
+        margin-top: 6px;
+      }
+      .c-sub {
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        margin-top: 2px;
+      }
+      .c-time {
+        font:
+          600 19px/1 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink);
+      }
+      .c-date {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 12px;
+        margin: 14px 0 24px;
+      }
+      .c-date span {
+        padding: 8px 0;
+        border-block: 1px solid rgb(184 145 58/0.7);
+        font:
+          600 13px/1 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink);
+      }
+      .c-date b {
+        font:
+          600 66px/1 "Cormorant Garamond",
+          serif;
+        color: var(--g);
+      }
+      .c-place {
+        font:
+          600 20px/1.3 "Cormorant Garamond",
+          serif;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--g);
+        margin-top: 6px;
+      }
+      .campus {
+        font-size: 28px;
+        color: var(--gold);
+      }
+      .c-addr {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      #cdLabel {
+        margin-top: 28px;
+      }
+      .count {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin: 10px auto 0;
+        max-width: 360px;
+      }
+      .count span {
+        background: var(--g);
+        color: var(--gold-l);
+        border-radius: 16px;
+        padding: 12px 0 10px;
+        font-size: 10.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        box-shadow:
+          inset 0 0 0 1px rgb(228 203 134/0.25),
+          0 10px 20px -14px rgb(0 66 37/0.9);
+      }
+      .count b {
+        display: block;
+        font:
+          600 30px/1.1 "Cormorant Garamond",
+          serif;
+        color: var(--bg);
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0;
+      }
+      .bump {
+        animation: bump 0.5s var(--spring);
+      }
+
+      /* album: justified rows, every photo shown whole */
+      .rows {
+        display: grid;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .rows > div {
+        display: flex;
+        gap: 8px;
+      }
+      .rows figure {
+        flex: var(--ar) 1 0;
+        aspect-ratio: var(--ar);
+        min-width: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #efe6d2;
+        box-shadow: 0 12px 22px -16px rgb(74 58 48/0.6);
+      }
+      .rows img,
+      .rows video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .thanks {
+        max-width: 36ch;
+        margin: 0 auto;
+      }
+      .thanks p:not(.script) {
+        font:
+          italic 500 17.5px/1.5 "Cormorant Garamond",
+          serif;
+        color: var(--ink);
+        margin-top: 12px;
+      }
+      .thanks cite {
+        display: block;
+        margin-top: 10px;
+        font:
+          400 40px/1.1 "Great Vibes",
+          cursive;
+        color: var(--g);
+      }
+
+      /* page 4: RSVP + guestbook, form styled after the reference: rounded fields with the label inside */
+      .gb {
+        position: relative;
+        margin: 24px auto 0;
+        max-width: 380px;
+        display: grid;
+        gap: 12px;
+      }
+      .gb :is(input:not([type="file"]), select, textarea) {
+        width: 100%;
+        font:
+          400 16px/1.4 "Be Vietnam Pro",
+          sans-serif;
+        color: var(--ink);
+        background: #fffdf6;
+        border: 1.5px solid rgb(0 66 37/0.45);
+        border-radius: 12px;
+        padding: 12px 18px;
+      }
+      .gb textarea {
+        border-radius: 6px;
+        resize: none;
+        height: 96px;
+      }
+      .gb select {
+        -webkit-appearance: none;
+        appearance: none;
+        padding-right: 40px;
+        background: #fffdf6
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0h12L6 8z' fill='%23004225'/%3E%3C/svg%3E")
+          no-repeat right 18px center;
+      }
+      .gb select:invalid {
+        color: #8a8778;
+      }
+      .gb :is(input, select, textarea)::placeholder {
+        color: #8a8778;
+      }
+      .gb :is(input, select, textarea):focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 1px;
+      }
+      .gb [hidden] {
+        display: none;
+      }
+      .file {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 48px;
+        padding: 8px 18px;
+        border: 1.5px dashed rgb(0 66 37/0.45);
+        border-radius: 22px;
+        color: var(--g);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: left;
+      }
+      .file input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      .file:focus-within {
+        outline: 2px solid var(--gold);
+        outline-offset: 1px;
+      }
+      #preview {
+        width: 44px;
+        height: 44px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-left: auto;
+      }
+      .hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+      }
+      .gb .btn {
+        width: 100%;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+      .gb .btn:disabled {
+        opacity: 0.6;
+      }
+      .rsvp-msg {
+        min-height: 1.6em;
+        text-align: center;
+        font:
+          italic 500 19px/1.4 "Cormorant Garamond",
+          serif;
+        color: var(--g);
+      }
+      .cap-doodle {
+        display: block;
+        width: 220px;
+        height: auto;
+        margin: 14px auto 0;
+        color: var(--g);
+      }
+
+      .wall-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 20px;
+      }
+      .wish {
+        background: #fffdf6;
+        border-radius: 14px;
+        padding: 18px;
+        text-align: left;
+        box-shadow: 0 14px 26px -18px rgb(0 40 20/0.45);
+        rotate: -1deg;
+      }
+      .wish:nth-child(even) {
+        rotate: 1deg;
+      }
+      .wish h4 {
+        font:
+          400 30px/1.15 "Great Vibes",
+          cursive;
+        color: var(--g);
+      }
+      .wish p {
+        margin-top: 4px;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
+      }
+      .wish img {
+        width: 100%;
+        margin-top: 12px;
+        border-radius: 10px;
+        background: #efe6d2;
+      }
+
+      /* closing: photo darkened with the primary green, like the reference's "Hẹn gặp / Thank you" band */
+      .ket {
+        display: grid;
+        place-content: center;
+        gap: 10px;
+        height: 100svh;
+        padding: 80px 28px calc(env(safe-area-inset-bottom) + 64px);
+        scroll-snap-align: start;
+        text-align: center;
+        color: var(--bg);
+        background:
+          linear-gradient(rgb(0 40 22/0.72), rgb(0 30 16/0.9)),
+          var(--ket) center/cover;
+      }
+      .ket .script {
+        font-size: 46px;
+        color: #f3e4b8;
+      }
+      .ket p:not(.script) {
+        max-width: 30ch;
+        margin: 0 auto;
+        font:
+          italic 500 19px/1.5 "Cormorant Garamond",
+          serif;
+      }
+      .ket small {
+        margin-top: 14px;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold-l);
+      }
+
+      .sound {
+        position: fixed;
+        z-index: 40;
+        top: calc(env(safe-area-inset-top) + 14px);
+        right: max(14px, calc((100vw - 480px) / 2 + 14px));
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgb(0 66 37/0.25);
+        background: rgb(255 248 231/0.8);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        color: var(--g);
+        font-size: 18px;
+      }
+      .sound[aria-pressed="true"] {
+        background: var(--g);
+        color: var(--gold-l);
+        animation: spin 6s linear infinite;
+      }
+      #fx {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 60;
+      }
+
+      @keyframes swipe {
+        0% {
+          left: 6%;
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          left: 88%;
+          opacity: 0;
+        }
+      }
+      @keyframes twinkle {
+        50% {
+          transform: scale(0.4) rotate(45deg);
+          opacity: 0.3;
+        }
+      }
+      @keyframes bump {
+        from {
+          transform: translateY(-35%);
+          opacity: 0.2;
+        }
+      }
+      @keyframes spin {
+        to {
+          rotate: 360deg;
+        }
+      }
+      @keyframes tap {
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation: none !important;
+          transition-duration: 0.01ms !important;
+          transition-delay: 0s !important;
+        }
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body class="locked">
+    <!-- ============ INTRO ============ -->
+    <div id="intro" style="--mo: url(assets/mo-5.jpg)">
+      <div class="intro-head">
+        <p class="script">Bạn có một lá thư</p>
+      </div>
+      <div
+        class="stage"
+        id="env"
+        role="button"
+        tabindex="0"
+        aria-label="Xé phong bì để mở thư mời"
+      >
+        <div class="e-back eb"></div>
+        <div class="letter" role="img" aria-label="Graduation Ceremony · Nguyễn Trúc Anh Thư, Nurse Anesthetist, ĐH Y khoa Phạm Ngọc Thạch">
+          <div class="l-hero">
+            <p class="script l-title">Graduation<br />Ceremony</p>
+            <img src="assets/v3/hero-nguoi.webp" alt="" />
+            <div class="l-foot">
+              <p class="full">Nguyễn Trúc Anh Thư</p>
+              <div class="orn">✦</div>
+              <p class="sub">Nurse Anesthetist · ĐH Y khoa Phạm Ngọc Thạch</p>
+            </div>
+          </div>
+        </div>
+        <div class="e-front eb">
+          <div class="addr">
+            <small>Thân gửi</small><b class="to-name">những người thân yêu</b>
+          </div>
+          <div class="stamp"><i>🎓</i>2026</div>
+          <div class="postmark">04.12<br />2026</div>
+        </div>
+        <div class="strip-wrap eb">
+          <div class="strip">Xé ở đây<span class="dot"></span></div>
+        </div>
+        <div class="peel" aria-hidden="true">
+          <div class="strip">Xé ở đây</div>
+        </div>
+      </div>
+      <p class="intro-hint">
+        Vuốt ngang mép trên để xé thư · nhớ bật loa nhé ♪
+      </p>
+      <p class="open-hint">Chạm để xem thiệp</p>
+    </div>
+
+    <audio id="music" src="assets/bg-music.mp3" loop preload="auto"></audio>
+    <button
+      class="sound"
+      id="soundBtn"
+      aria-pressed="false"
+      aria-label="Bật hoặc tắt nhạc"
+      hidden
+    >
+      ♪
+    </button>
+
+    <main>
+      <!-- 1. invitation card -->
+      <section class="sec" style="--mo: url(assets/mo-1.jpg)">
+        <div class="fit">
+          <article class="card r">
+            <p class="kicker">Thân mời</p>
+            <p class="script to-guest">Những người thân yêu</p>
+            <p class="c-small">tới dự lễ tốt nghiệp của</p>
+            <h2 class="c-name">Nguyễn Trúc Anh Thư</h2>
+            <p class="c-sub">Nurse Anesthetist</p>
+            <div class="orn" aria-hidden="true">✦</div>
+            <p class="c-time js-time"></p>
+            <div class="c-date">
+              <span class="js-month"></span><b class="js-day"></b
+              ><span class="js-year"></span>
+            </div>
+            <p class="c-small">Tại địa điểm</p>
+            <h3 class="c-place">Trường Đại học Y khoa<br />Phạm Ngọc Thạch</h3>
+            <p class="script campus">Cơ sở 2</p>
+            <p class="c-addr">567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh</p>
+            <div class="actions">
+              <a class="btn" id="dirLink" target="_blank" rel="noopener">Xem chỉ đường</a>
+              <button class="btn ghost" data-ics>Thêm vào lịch</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. photo + countdown -->
+      <section class="sec" style="--mo: url(assets/mo-3.jpg)">
+        <div class="fit">
+          <figure class="pop tall" style="aspect-ratio: 840/1140">
+            <img class="bg" src="assets/v3/noi-nen.jpg" alt="" loading="lazy" />
+            <i class="line" aria-hidden="true"></i>
+            <img class="ppl" src="assets/v3/noi-nguoi.webp" alt="Anh Thư cầm bằng tốt nghiệp giữa giếng trời của trường" loading="lazy" />
+          </figure>
+          <p class="kicker r" id="cdLabel">Còn lại</p>
+          <div class="count r">
+            <span><b id="cd-d">0</b>ngày</span><span><b id="cd-h">00</b>giờ</span
+            ><span><b id="cd-m">00</b>phút</span><span><b id="cd-s">00</b>giây</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-5. album: three screens of justified rows (--ar = photo width / height) -->
+      <section class="sec" style="--mo: url(assets/mo-4.jpg)">
+        <div class="fit">
+          <p class="kicker r">Album</p>
+          <p class="script lead r">Hành trình trưởng thành</p>
+          <div class="rows r">
+            <div>
+            <figure style="--ar: 1.333"><img src="assets/v3/album/a1.jpg" alt="Thư cùng ê-kíp gây mê hồi sức trong phòng mổ" loading="lazy" /></figure>
+            </div>
+            <div>
+            <figure style="--ar: 0.667"><img src="assets/v3/album/a2.jpg" alt="Thư cầm bằng tốt nghiệp ở giếng trời của trường" loading="lazy" /></figure>
+            <figure style="--ar: 1.333"><img src="assets/v3/album/a3.jpg" alt="Thư cùng các bạn trước Khoa Phẫu thuật Gây mê hồi sức" loading="lazy" /></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec" style="--mo: url(assets/mo-4.jpg)">
+        <div class="fit">
+          <div class="rows r">
+            <div>
+              <figure style="--ar: 1.778">
+                <video src="assets/v3/clip.mp4" poster="assets/v3/clip.jpg" muted loop playsinline preload="none" aria-label="Clip kỷ niệm trong phòng mổ"></video>
+              </figure>
+            </div>
+            <div>
+            <figure style="--ar: 0.75"><img src="assets/v3/album/a5.jpg" alt="Thư cùng nhóm bạn" loading="lazy" /></figure>
+            <figure style="--ar: 0.75"><img src="assets/v3/album/a6.jpg" alt="Thư cầm chứng chỉ" loading="lazy" /></figure>
+            </div>
+            <div>
+            <figure style="--ar: 1"><img src="assets/v3/album/a9.jpg" alt="Thư trong đồ phòng mổ giơ tay chữ V" loading="lazy" /></figure>
+            <figure style="--ar: 1.499"><img src="assets/v3/album/a7.jpg" alt="Thư trước bảng tên Đại học Y khoa Phạm Ngọc Thạch" loading="lazy" /></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec" style="--mo: url(assets/mo-4.jpg)">
+        <div class="fit">
+          <div class="rows r">
+            <div>
+            <figure style="--ar: 1.333"><img src="assets/v3/album/a4.jpg" alt="Thư nhận hoa cùng thầy cô" loading="lazy" /></figure>
+            </div>
+            <div>
+            <figure style="--ar: 0.563"><img src="assets/v3/album/a8.jpg" alt="Một bàn tay nắm tay em bé trong phòng mổ" loading="lazy" /></figure>
+            <figure style="--ar: 0.986"><img src="assets/v3/album/a10.jpg" alt="Thư selfie: ngày nào cũng khóc" loading="lazy" /></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6-7. thank-you: photo, then the letter -->
+      <section class="sec" style="--mo: url(assets/mo-1.jpg)">
+        <div class="fit">
+          <figure class="pop arch" style="aspect-ratio: 840/1278">
+            <img class="bg" src="assets/v3/camon-nen.jpg" alt="" loading="lazy" />
+            <i class="line" aria-hidden="true"></i>
+            <img class="ppl" src="assets/v3/camon-nguoi.webp" alt="Anh Thư trong đồ phòng mổ, khoanh tay mỉm cười" loading="lazy" />
+          </figure>
+          <p class="script lead r">Lời cảm ơn</p>
+        </div>
+      </section>
+      <section class="sec" style="--mo: url(assets/mo-1.jpg)">
+        <div class="fit">
+          <article class="thanks r">
+            <p>
+              Vậy là hành trình 4 năm của Thư cũng đã đi đến một cột mốc thật đẹp.
+              Nhìn lại chặng đường đã qua, Thư biết mình thật may mắn khi luôn có
+              những người yêu thương, quan tâm và đồng hành bên cạnh.
+            </p>
+            <p>
+              Cảm ơn tất cả những ai đã từng xuất hiện, yêu thương, sẻ chia, giúp
+              đỡ và đồng hành cùng Thư, dù bằng cách này hay cách khác. Cảm ơn
+              những lời động viên lúc chông chênh, những cái ôm khi nản lòng và cả
+              những bài học từ những lần vấp ngã. Mỗi sự hiện diện đều mang một ý
+              nghĩa riêng, mỗi sự tử tế đều trở thành một phần ký ức mà Thư luôn
+              trân quý.
+            </p>
+            <p>
+              Nếu hôm nay Thư có một hành trình đáng tự hào để nhìn lại, thì đó
+              không chỉ là câu chuyện của riêng Thư, mà còn là câu chuyện được
+              viết nên bởi rất nhiều yêu thương.
+            </p>
+            <p>Cảm ơn bạn vì đã là một phần trong hành trình này...</p>
+            <cite>Anh Thư</cite>
+          </article>
+        </div>
+      </section>
+
+      <!-- 8. RSVP -->
+      <section class="sec" style="--mo: url(assets/mo-5.jpg)">
+        <div class="fit">
+          <p class="kicker r">Hồi âm &amp; lưu bút</p>
+          <p class="script lead r"><span class="to-name">Bạn</span> sẽ đến chứ?</p>
+          <p class="body r">
+            Rất mong có bạn đến chung vui cùng Thư! Bạn xác nhận giúp Thư nha, để
+            Thư chuẩn bị đón tiếp chu đáo nhất. Cảm ơn bạn!
+          </p>
+          <form class="gb r" id="gb" novalidate>
+            <input name="name" maxlength="60" autocomplete="name" placeholder="Tên của bạn" aria-label="Tên của bạn" required />
+            <textarea name="message" maxlength="1000" placeholder="Gửi lời chúc đến tân cử nhân" aria-label="Lời chúc"></textarea>
+            <select name="attend" aria-label="Bạn sẽ đến chứ?" required>
+              <option value="" selected disabled hidden>Bạn sẽ đến chứ?</option>
+              <option value="yes">Chắc chắn rồi!</option>
+              <option value="no">Tiếc quá, mình bận</option>
+            </select>
+            <select name="guests" id="guestsField" aria-label="Bạn đi mấy người, tính cả bạn" hidden>
+              <option value="1">Mình đi 1 người</option>
+              <option value="2">Đi 2 người</option>
+              <option value="3">Đi 3 người</option>
+              <option value="4">Đi 4 người</option>
+              <option value="5">Đi 5 người</option>
+            </select>
+            <label class="file"
+              ><input type="file" name="photo" accept="image/*" /><span id="fileLabel"
+                >＋ Gửi kèm một tấm ảnh (không bắt buộc)</span
+              ><img id="preview" alt="Ảnh bạn chọn" hidden
+            /></label>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="btn" type="submit" id="gbBtn">Xác nhận</button>
+            <p class="rsvp-msg" id="rsvpMsg" aria-live="polite"></p>
+          </form>
+          <svg class="cap-doodle" viewBox="0 0 220 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 26c22-14 44 8 66-2s20-12 26-6" />
+            <path d="M216 26c-22-14-44 8-66-2s-20-12-26-6" />
+            <path d="M86 16l24-10 24 10-24 10z" />
+            <path d="M96 20v8c8 5 20 5 28 0v-8" />
+            <path d="M134 16v9" />
+            <circle cx="134" cy="27" r="1.6" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- 9. guestbook wall: grows with the wishes, shown once there is at least one -->
+      <section class="sec grow" id="wall" style="--mo: url(assets/mo-5.jpg)" hidden>
+        <p class="script lead">Sổ lưu bút</p>
+        <div class="wall-list" id="wallList"></div>
+      </section>
+    </main>
+
+    <!-- 10. closing -->
+    <section class="ket" style="--ket: url(assets/v3/ket.jpg)">
+      <p class="script">Hẹn gặp <span class="to-name">bạn</span></p>
+      <p>
+        Sự hiện diện của mọi người chính là món quà ý nghĩa nhất mà Thư vô cùng
+        trân quý trong ngày vui này
+      </p>
+      <p class="script">Thank you!</p>
+      <small>Anh Thư · 04.12.2026 · 15:00</small>
+    </section>
+
+    <canvas id="fx" aria-hidden="true"></canvas>
+
+    <script>
+      // ---- Chỉnh thông tin ở đây ----
+      const CFG = {
+        date: "2026-12-04",
+        time: "15:00", // giờ làm lễ (24h)
+        address: "567 Nguyễn Cửu Phú, Tân Nhựt, Hồ Chí Minh",
+        title: "Lễ tốt nghiệp của Anh Thư",
+        place:
+          "Trường Đại học Y khoa Phạm Ngọc Thạch (cơ sở 2), 567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh",
+        sheetUrl: "", // link Web App của Apps Script (xem apps-script/Code.gs). Để trống thì form báo "chưa mở sổ lưu bút"
+      };
+
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => document.querySelectorAll(s);
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const target = new Date(`${CFG.date}T${CFG.time || "00:00"}:00+07:00`);
+
+      // ---- personalise: ?to=Minh ----
+      const guest = (new URLSearchParams(location.search).get("to") || "")
+        .trim()
+        .slice(0, 40);
+      if (guest)
+        $$(".to-name, .to-guest").forEach((el) => (el.textContent = guest));
+
+      // ---- static text from CFG ----
+      const weekday = new Intl.DateTimeFormat("vi-VN", {
+        weekday: "long",
+        timeZone: "Asia/Ho_Chi_Minh",
+      })
+        .format(target)
+        .replace(/^./, (c) => c.toUpperCase());
+      const [yy, mm, dd] = CFG.date.split("-");
+      const fill = (sel, txt) =>
+        $$(sel).forEach((el) => (el.textContent = txt));
+      fill(".js-time", `${CFG.time} · ${weekday}`);
+      fill(".js-month", `Tháng ${mm}`);
+      fill(".js-day", dd);
+      fill(".js-year", `Năm ${yy}`);
+      $("#dirLink").href =
+        `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CFG.address)}`;
+
+      // ---- music ----
+      const MAX_VOL = 0.3; // nhạc nền chỉ ở mức 30%
+      const music = $("#music"),
+        soundBtn = $("#soundBtn");
+      const syncMusic = () =>
+        soundBtn.setAttribute("aria-pressed", !music.paused);
+      music.onplay = music.onpause = syncMusic; // also catches the OS pausing it (calls, lock screen)
+      function fadeVolume(sec) {
+        const t0 = performance.now();
+        (function step(now) {
+          music.volume = MAX_VOL * Math.min(1, (now - t0) / (sec * 1000)) ** 2;
+          if (music.volume < MAX_VOL && !music.paused)
+            requestAnimationFrame(step);
+        })(t0);
+      }
+      let gain = null;
+      // Fade in from silence. iOS ignores audio.volume, so fade through Web Audio; but a file:// page
+      // can't route media into Web Audio (treated as cross-origin → silence), so there use audio.volume.
+      function playFading(sec = 4) {
+        music.play().catch(() => {}); // must be called inside a tap, or mobile browsers block it
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!gain && AC && location.protocol !== "file:") {
+          const ctx = new AC();
+          gain = ctx.createGain();
+          ctx
+            .createMediaElementSource(music)
+            .connect(gain)
+            .connect(ctx.destination);
+        }
+        if (gain) {
+          music.volume = 1; // the gain node does the fading now
+          const ctx = gain.context,
+            t = ctx.currentTime;
+          ctx.resume();
+          gain.gain.cancelScheduledValues(t);
+          gain.gain.setValueAtTime(0.001, t);
+          gain.gain.exponentialRampToValueAtTime(MAX_VOL, t + sec);
+        } else fadeVolume(sec);
+      }
+      soundBtn.onclick = () => (music.paused ? playFading(1.5) : music.pause());
+      // Try to start on page load. Browsers (always on iPhone) block sound before the first tap;
+      // if blocked, it starts on the tap that opens the envelope instead.
+      music.volume = 0;
+      music.play().then(
+        () => fadeVolume(4),
+        () => {},
+      );
+
+      // ---- intro: drag across the envelope to tear it, then the letter rises and unfolds ----
+      const intro = $("#intro"),
+        env = $("#env");
+      const zig = (bottom, n = 24, d = 5) => {
+        const pts = Array.from(
+          { length: n + 1 },
+          (_, i) =>
+            `${((i / n) * 100).toFixed(2)}% ${bottom ? `calc(100% - ${i % 2 ? d : 0}px)` : `${i % 2 ? d : 0}px`}`,
+        );
+        return bottom
+          ? `polygon(0 0,100% 0,${pts.reverse().join(",")})`
+          : `polygon(${pts.join(",")},100% 100%,0 100%)`;
+      };
+      env.style.setProperty("--zig-top", zig(false));
+      env.style.setProperty("--zig-bot", zig(true));
+
+      let t = 0,
+        lastX = null,
+        done = false,
+        auto = 0,
+        buzz = 0;
+      function setT(v) {
+        t = Math.min(1, v);
+        env.style.setProperty("--t", (t * 100).toFixed(2) + "%");
+        env.style.setProperty("--k", t.toFixed(3));
+        if (t - buzz > 0.08) {
+          buzz = t;
+          navigator.vibrate?.(6);
+        } // little paper-rip ticks on Android
+        if (t >= 1) finish();
+      }
+      function startMusic() {
+        if (music.paused) playFading();
+      } // must run inside a tap/keypress; skipped if autoplay already worked
+      function autoTear() {
+        if (done || auto) return;
+        const t0 = t,
+          start = performance.now(),
+          dur = reduce ? 0 : 650 * (1 - t0) + 150;
+        auto = requestAnimationFrame(function step(now) {
+          const k = dur ? Math.min(1, (now - start) / dur) : 1;
+          setT(t0 + (1 - t0) * (1 - (1 - k) ** 3));
+          if (k < 1) requestAnimationFrame(step);
+        });
+      }
+      env.addEventListener("pointerdown", (e) => {
+        if (done) return;
+        lastX = e.clientX;
+        env.setPointerCapture(e.pointerId);
+        intro.classList.add("tearing");
+      });
+      env.addEventListener("pointermove", (e) => {
+        if (lastX === null || done || auto) return;
+        setT(t + Math.max(0, e.clientX - lastX) / env.offsetWidth); // only rightward motion tears
+        lastX = e.clientX;
+      });
+      env.addEventListener("pointerup", () => {
+        lastX = null;
+        startMusic();
+        autoTear();
+      }); // a plain tap tears it too
+      env.addEventListener("pointercancel", () => {
+        lastX = null;
+      });
+      env.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          startMusic();
+          autoTear();
+        }
+      });
+
+      function finish() {
+        if (done) return;
+        done = true;
+        env.removeAttribute("tabindex");
+        const steps = reduce
+          ? [
+              ["torn", 0],
+              ["rise", 0],
+              ["leave", 0],
+              ["unfold", 0],
+              ["ready", 0],
+            ]
+          : [
+              ["torn", 0],
+              ["rise", 400],
+              ["leave", 1250],
+              ["unfold", 2150],
+              ["ready", 3300],
+            ];
+        for (const [cls, ms] of steps)
+          setTimeout(() => intro.classList.add(cls), ms);
+      }
+      // the full letter stays up so guests can read it; a tap (or Enter) moves on to the card
+      let opened = false;
+      function openApp() {
+        if (opened || !intro.classList.contains("ready")) return;
+        opened = true;
+        intro.classList.add("done");
+        document.body.classList.remove("locked");
+        document.body.classList.add("opened");
+        soundBtn.hidden = false;
+        startReveals();
+        setTimeout(() => intro.remove(), reduce ? 50 : 1000);
+      }
+      intro.addEventListener("click", openApp);
+      addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") openApp();
+      });
+
+      // ---- reveal on scroll ----
+      function startReveals() {
+        const io = new IntersectionObserver(
+          (es) =>
+            es.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            }),
+          // sections snap to a full screen, so anything on it is already in view; a bottom margin here
+          // would leave items that sit near the bottom of a short phone never revealed
+          { threshold: 0.1 },
+        );
+        $$(".r, .pop").forEach((el) => io.observe(el));
+        // the album clip only plays (muted, the music keeps going) while it's on screen
+        const clip = $(".rows video");
+        new IntersectionObserver(
+          ([e]) =>
+            e.isIntersecting ? clip.play().catch(() => {}) : clip.pause(),
+          { threshold: 0.4 },
+        ).observe(clip);
+        requestAnimationFrame(frame);
+        loadWall();
+        fitPages();
+        document.fonts.ready.then(fitPages);
+      }
+
+      // ---- keep every section inside one screen: zoom its content down when a short phone can't hold it ----
+      function fitPages() {
+        $$(".fit").forEach((el) => {
+          el.style.zoom = "";
+          const page = el.parentElement, cs = getComputedStyle(page);
+          const room = page.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+          if (el.offsetHeight > room) el.style.zoom = (room / el.offsetHeight).toFixed(3);
+        });
+      }
+      addEventListener("resize", fitPages);
+
+      // ---- parallax: framed cut-outs move against their photo ----
+      const pops = [...$$(".pop")];
+      let lastY = -1;
+      function frame() {
+        if (!reduce && scrollY !== lastY) {
+          lastY = scrollY;
+          const vh = innerHeight;
+          for (const p of pops) {
+            const r = p.getBoundingClientRect();
+            if (r.bottom < 0 || r.top > vh) continue;
+            // -1 when the frame's centre is at the bottom of the screen, +1 at the top
+            p.style.setProperty(
+              "--py",
+              (1 - (2 * (r.top + r.height / 2)) / vh).toFixed(3),
+            );
+          }
+        }
+        requestAnimationFrame(frame);
+      }
+
+      // ---- countdown ----
+      const pad = (n, k) => String(n).padStart(k, "0");
+      const cdEls = {
+        d: $("#cd-d"),
+        h: $("#cd-h"),
+        m: $("#cd-m"),
+        s: $("#cd-s"),
+      };
+      function tick() {
+        const s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+        if (!s) $("#cdLabel").textContent = "Ngày vui đã đến";
+        const p = {
+          d: Math.floor(s / 86400),
+          h: Math.floor((s % 86400) / 3600),
+          m: Math.floor((s % 3600) / 60),
+          s: s % 60,
+        };
+        for (const key in cdEls) {
+          const el = cdEls[key],
+            v = pad(p[key], key === "d" ? 1 : 2);
+          if (el.textContent !== v) {
+            el.textContent = v;
+            el.classList.remove("bump");
+            void el.offsetWidth;
+            el.classList.add("bump");
+          }
+        }
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      // ---- add to calendar (.ics) ----
+      const icsEsc = (s) => s.replace(/([,;\\])/g, "\\$1");
+      const icsDate = (d) =>
+        d.toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
+      function downloadIcs() {
+        const day = CFG.date.replaceAll("-", "");
+        const nextDay = new Date(Date.parse(CFG.date + "T00:00:00Z") + 864e5)
+          .toISOString()
+          .slice(0, 10)
+          .replaceAll("-", "");
+        const when = CFG.time
+          ? [
+              `DTSTART:${icsDate(target)}`,
+              `DTEND:${icsDate(new Date(+target + 3 * 36e5))}`,
+            ]
+          : [`DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${nextDay}`];
+        const txt = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//thiep-tot-nghiep//VI",
+          "BEGIN:VEVENT",
+          `UID:tot-nghiep-anh-thu-${day}@thiep`,
+          `DTSTAMP:${icsDate(new Date())}`,
+          ...when,
+          `SUMMARY:${icsEsc("🎓 " + CFG.title)}`,
+          `LOCATION:${icsEsc(CFG.place)}`,
+          "END:VEVENT",
+          "END:VCALENDAR",
+        ].join("\r\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(
+          new Blob([txt], { type: "text/calendar" }),
+        );
+        a.download = "le-tot-nghiep-anh-thu.ics";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      }
+      $$("[data-ics]").forEach((b) => (b.onclick = downloadIcs));
+
+      // ---- RSVP + guestbook → Google Sheet (see apps-script/Code.gs) ----
+      const form = $("#gb"),
+        msg = $("#rsvpMsg"),
+        gbBtn = $("#gbBtn"),
+        preview = $("#preview");
+      if (guest) form.elements.name.value = guest;
+      form.addEventListener("change", (e) => {
+        if (e.target.name === "attend") {
+          $("#guestsField").hidden = e.target.value !== "yes";
+          fitPages(); // the extra field makes the form taller
+        }
+        if (e.target.name === "photo") {
+          const f = e.target.files[0];
+          if (preview.src) URL.revokeObjectURL(preview.src);
+          preview.hidden = !f;
+          if (f) preview.src = URL.createObjectURL(f);
+          $("#fileLabel").textContent = f
+            ? f.name
+            : "＋ Gửi kèm một tấm ảnh (không bắt buộc)";
+        }
+      });
+      // Phone photos are 3-10MB; shrink to a ~200KB JPEG before sending.
+      async function shrink(file, max = 1280) {
+        const bmp = await createImageBitmap(file);
+        const k = Math.min(1, max / Math.max(bmp.width, bmp.height));
+        const c = document.createElement("canvas");
+        c.width = Math.round(bmp.width * k);
+        c.height = Math.round(bmp.height * k);
+        c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
+        return c.toDataURL("image/jpeg", 0.82);
+      }
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const f = form.elements,
+          name = f.name.value.trim(),
+          attend = f.attend.value;
+        if (f.website.value) return; // honeypot: only bots fill the hidden field
+        if (!name) {
+          msg.textContent = "Bạn điền tên giúp Thư nha";
+          return f.name.focus();
+        }
+        if (!attend) {
+          msg.textContent = "Bạn chọn có đến hay không giúp Thư nha";
+          return;
+        }
+        gbBtn.disabled = true;
+        gbBtn.textContent = "Đang gửi…";
+        msg.textContent = "";
+        try {
+          let photo = "";
+          if (f.photo.files[0]) {
+            try {
+              photo = await shrink(f.photo.files[0]);
+            } catch {
+              throw new Error(
+                "Ảnh này Thư không mở được, bạn chọn ảnh khác nha",
+              );
+            }
+          }
+          if (!CFG.sheetUrl)
+            throw new Error("Thư chưa mở sổ lưu bút, bạn quay lại sau nha");
+          // text/plain body (fetch's default for a string) keeps this a "simple" request: no CORS preflight, which Apps Script can't answer
+          const res = await fetch(CFG.sheetUrl, {
+            method: "POST",
+            body: JSON.stringify({
+              name,
+              attend,
+              guests: attend === "yes" ? +f.guests.value : 0,
+              message: f.message.value.trim(),
+              photo,
+            }),
+          });
+          const out = await res.json();
+          if (!out.ok) throw new Error(out.error || "Gửi chưa được");
+          msg.textContent =
+            attend === "yes"
+              ? `Yay! Thư hẹn gặp ${name} vào ngày 04/12 nha`
+              : "Cảm ơn bạn đã báo Thư nha, lời chúc của bạn Thư nhận rồi";
+          gbBtn.textContent = "Đã gửi ✓";
+          if (attend === "yes") {
+            const r = gbBtn.getBoundingClientRect();
+            burst(r.left + r.width / 2, r.top);
+          }
+          try {
+            localStorage.setItem("rsvp", attend);
+          } catch {}
+          loadWall();
+        } catch (err) {
+          msg.textContent =
+            err instanceof TypeError
+              ? "Mạng đang chập chờn, bạn thử gửi lại giúp Thư nha"
+              : err.message;
+          gbBtn.disabled = false;
+          gbBtn.textContent = "Xác nhận";
+        }
+      });
+      try {
+        if (localStorage.getItem("rsvp"))
+          msg.textContent =
+            "Bạn đã gửi hồi âm rồi nè, gửi thêm lời chúc cũng được nha";
+      } catch {}
+
+      async function loadWall() {
+        if (!CFG.sheetUrl) return;
+        try {
+          const { list = [] } = await (await fetch(CFG.sheetUrl)).json();
+          const box = $("#wallList");
+          box.replaceChildren(
+            ...list.map((w) => {
+              const card = document.createElement("article");
+              card.className = "wish";
+              const h = document.createElement("h4");
+              h.textContent = w.name;
+              const p = document.createElement("p");
+              p.textContent = w.message;
+              card.append(h, p);
+              if (/^[\w-]{10,}$/.test(w.photo || "")) {
+                // a Drive file id; anything else is ignored
+                const img = document.createElement("img");
+                img.src = `https://drive.google.com/thumbnail?id=${w.photo}&sz=w800`;
+                img.loading = "lazy";
+                img.alt = `Ảnh ${w.name} gửi Thư`;
+                card.append(img);
+              }
+              return card;
+            }),
+          );
+          $("#wall").hidden = !list.length;
+        } catch {} // the wall is a nice-to-have; the form still works without it
+      }
+
+      // ---- confetti ----
+      const cv = $("#fx"),
+        cx = cv.getContext("2d");
+      let bits = [],
+        fxRaf = 0;
+      function burst(x, y) {
+        if (reduce) return;
+        const dpr = devicePixelRatio || 1;
+        cv.width = innerWidth * dpr;
+        cv.height = innerHeight * dpr;
+        cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const cols = [
+          "#004225",
+          "#0B5A35",
+          "#B8913A",
+          "#E4CB86",
+          "#FFF8E7",
+          "#FFFFFF",
+        ];
+        for (let i = 0; i < 150; i++) {
+          const a = -Math.PI / 2 + (Math.random() - 0.5) * 1.9,
+            v = 7 + Math.random() * 10;
+          bits.push({
+            x,
+            y,
+            vx: Math.cos(a) * v,
+            vy: Math.sin(a) * v,
+            r: Math.random() * 6.3,
+            vr: (Math.random() - 0.5) * 0.3,
+            s: 6 + Math.random() * 6,
+            c: cols[i % cols.length],
+            cap: i % 15 === 0,
+            life: 0,
+          });
+        }
+        if (!fxRaf) fxRaf = requestAnimationFrame(fxTick);
+      }
+      function fxTick() {
+        cx.clearRect(0, 0, innerWidth, innerHeight);
+        bits = bits.filter((p) => p.y < innerHeight + 40 && p.life < 420);
+        for (const p of bits) {
+          p.life++;
+          p.vy += 0.28;
+          p.vx *= 0.985;
+          p.vy *= 0.985;
+          p.x += p.vx;
+          p.y += p.vy;
+          p.r += p.vr;
+          cx.save();
+          cx.translate(p.x, p.y);
+          cx.rotate(p.r);
+          if (p.cap) {
+            cx.font = "22px serif";
+            cx.fillText("🎓", -11, 8);
+          } else {
+            cx.scale(1, Math.cos(p.life * 0.18 + p.r));
+            cx.fillStyle = p.c;
+            cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+          }
+          cx.restore();
+        }
+        fxRaf = bits.length ? requestAnimationFrame(fxTick) : 0;
+      }
+    </script>
+  </body>
+</html>
