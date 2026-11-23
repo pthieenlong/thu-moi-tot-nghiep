@@ -13,7 +13,9 @@
     />
     <meta property="og:title" content="Thư mời tốt nghiệp · Anh Thư" />
     <meta property="og:description" content="Mở thiệp để xem lời mời nhé!" />
-    <meta property="og:image" content="assets/hero-nguoi.webp" />
+    <meta property="og:image" content="assets/og-thiep.jpg" />
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="1536" />
     <meta name="theme-color" content="#FFF8E7" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -590,6 +592,13 @@
         align-items: center;
         pointer-events: none;
         color: var(--gold);
+      }
+      .scroll-cue span {
+        margin-bottom: 6px;
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        color: var(--g);
       }
       .scroll-cue svg {
         width: 22px;
@@ -1313,8 +1322,9 @@
             </div>
           </article>
         </div>
-        <!-- scroll cue: two chevrons drifting down, decorative only -->
+        <!-- scroll cue: label + two chevrons drifting down, decorative only -->
         <div class="scroll-cue" aria-hidden="true">
+          <span>Vuốt xuống để xem tiếp</span>
           <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
           <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
         </div>
