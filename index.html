@@ -1625,7 +1625,8 @@
         title: "Lễ tốt nghiệp của Anh Thư",
         place:
           "Trường Đại học Y khoa Phạm Ngọc Thạch (cơ sở 2), 567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh",
-        sheetUrl: "", // link Web App của Apps Script (xem apps-script/Code.gs). Để trống thì form báo "chưa mở sổ lưu bút"
+        sheetUrl:
+          "https://script.google.com/macros/s/AKfycbxl30C-1oSJq4AdnMn9PpN50dLzFulV2Vcl3Ojpn1LXM3MWxTJl9h4BxGYEycsfIi2E/exec",
       };
 
       const $ = (s) => document.querySelector(s),
@@ -1835,7 +1836,9 @@
         const clipIO = new IntersectionObserver(
           (es) =>
             es.forEach((e) =>
-              e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause(),
+              e.isIntersecting
+                ? e.target.play().catch(() => {})
+                : e.target.pause(),
             ),
           { threshold: 0.4 },
         );
