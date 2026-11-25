@@ -14,13 +14,15 @@
  * Sửa code này sau khi đã triển khai: Triển khai → Quản lý triển khai → bút chì → Phiên bản: "Phiên bản mới" → Triển khai.
  * (Nếu tạo triển khai mới thì URL đổi, phải dán lại vào index.html.)
  *
- * Ẩn một lời chúc khỏi sổ lưu bút trên thiệp: gõ bất kỳ chữ gì (vd "x") vào cột "Ẩn" của dòng đó.
+ * Duyệt lời chúc: lời chúc mới chỉ hiện trên thiệp khi bạn tick ô ở cột "Hiện" của dòng đó (bỏ tick là ẩn lại).
+ * Sheet tạo từ bản cũ (cột G tên "Ẩn"): đổi tên ô G1 thành "Hiện", xoá nội dung cột G từ dòng 2,
+ *   bôi đen G2:G → Chèn → Hộp kiểm, rồi tick những dòng muốn hiện.
  * Ảnh khách gửi nằm trong thư mục Drive "Lưu bút - ảnh", ai có link mới xem được (để thiệp hiện được ảnh).
  */
 
 const SHEET_NAME = 'Lưu bút';
 const FOLDER_NAME = 'Lưu bút - ảnh';
-const HEADER = ['Thời gian', 'Tên', 'Tham dự', 'Số người', 'Lời chúc', 'Ảnh', 'Ẩn'];
+const HEADER = ['Thời gian', 'Tên', 'Tham dự', 'Số người', 'Lời chúc', 'Ảnh', 'Hiện'];
 const MAX_PHOTO_BYTES = 3 * 1024 * 1024; // the page sends ~200KB; anything far bigger isn't from it
 
 function doPost(e) {
@@ -51,18 +53,20 @@ function doPost(e) {
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
-    sheet().appendRow([new Date(), safe(name), attend, guests, safe(message), photoUrl, '']);
+    const sh = sheet();
+    sh.appendRow([new Date(), safe(name), attend, guests, safe(message), photoUrl, false]);
+    sh.getRange(sh.getLastRow(), 7).insertCheckboxes(); // unticked = hidden until approved
   } finally {
     lock.releaseLock();
   }
   return json({ ok: true });
 }
 
-// Public guestbook: only name, message and photo. Attendance stays private in the Sheet.
+// Public guestbook: only ticked rows, and only name, message and photo. Attendance stays private in the Sheet.
 function doGet() {
   const rows = sheet().getDataRange().getValues().slice(1);
   const list = rows
-    .filter(r => !r[6] && (r[4] || r[5]))
+    .filter(r => r[6] === true && (r[4] || r[5]))
     .reverse()
     .slice(0, 100)
     .map(r => ({ name: String(r[1]), message: String(r[4]), photo: (/\/d\/([\w-]+)/.exec(r[5]) || [])[1] || '' }));
