@@ -1,786 +1,2357 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Thư mời tốt nghiệp · Anh Thư</title>
-<meta name="description" content="Nguyễn Trúc Anh Thư trân trọng mời bạn đến dự lễ tốt nghiệp lúc 15:00 ngày 04/12/2026.">
-<meta property="og:title" content="Thư mời tốt nghiệp · Anh Thư">
-<meta property="og:description" content="Bạn có một lá thư, mở ra xem nhé!">
-<meta property="og:image" content="assets/hero-nguoi.webp">
-<meta name="theme-color" content="#FFF8E7">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero-nguoi.webp">
-<style>
-/* Tokens. Paper + scrub green are given; tassel red is the one accent, used sparingly. */
-:root{
-  --paper:#FFF8E7; --scrub:#004225; --ink:#12241A; --muted:#5E665E; --tassel:#C21F3A; --sage:#DCE6D5; --rule:#E6DBC0;
-  --deep:#001F11; /* backdrop that shows between pages while they rotate */
-  --display:"Bricolage Grotesque",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; --script:"Great Vibes",cursive;
-  --ease:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.34,1.4,.64,1);
-  color-scheme:light;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;background:var(--deep);scroll-snap-type:y mandatory}
-body{color:var(--ink);font:400 15px/1.6 "Be Vietnam Pro",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body.locked{overflow:hidden}
-img{display:block;max-width:100%}
-[hidden]{display:none!important}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:2px solid var(--tassel);outline-offset:3px}
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Thư mời tốt nghiệp · Anh Thư</title>
+    <meta
+      name="description"
+      content="Nguyễn Trúc Anh Thư trân trọng mời bạn đến dự lễ tốt nghiệp lúc 16:00 ngày 04/12/2026."
+    />
+    <meta property="og:title" content="Thư mời tốt nghiệp · Anh Thư" />
+    <meta
+      property="og:description"
+      content="Bạn có một lá thư, mở ra xem nhé!"
+    />
+    <meta property="og:image" content="assets/hero-nguoi.webp" />
+    <meta name="theme-color" content="#FFF8E7" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/hero-nguoi.webp" />
+    <style>
+      /* Tokens. Paper + scrub green are given; tassel red is the one accent, used sparingly. */
+      :root {
+        --paper: #fff8e7;
+        --scrub: #004225;
+        --ink: #12241a;
+        --muted: #5e665e;
+        --tassel: #c21f3a;
+        --sage: #dce6d5;
+        --rule: #e6dbc0;
+        --deep: #001f11; /* backdrop that shows between pages while they rotate */
+        --display: "Bricolage Grotesque", system-ui, sans-serif;
+        --mono: "JetBrains Mono", ui-monospace, monospace;
+        --script: "Great Vibes", cursive;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+        --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        background: var(--deep);
+        scroll-snap-type: y mandatory;
+      }
+      body {
+        color: var(--ink);
+        font:
+          400 15px/1.6 "Be Vietnam Pro",
+          system-ui,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      body.locked {
+        overflow: hidden;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      :focus-visible {
+        outline: 2px solid var(--tassel);
+        outline-offset: 3px;
+      }
 
-.script{font-family:var(--script);font-weight:400;line-height:1.1}
-.cond{font-family:var(--display);font-variation-settings:"wdth" 75,"opsz" 96;font-weight:700;letter-spacing:-.01em;line-height:.95;text-transform:uppercase}
-.label{font:600 10.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+      .script {
+        font-family: var(--script);
+        font-weight: 400;
+        line-height: 1.1;
+      }
+      .cond {
+        font-family: var(--display);
+        font-variation-settings:
+          "wdth" 75,
+          "opsz" 96;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+      .label {
+        font: 600 10.5px/1.3 var(--mono);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;border:0;
-  background:var(--scrub);color:var(--paper);font-weight:600;font-size:15px;text-decoration:none;transition:transform .3s var(--spring)}
-.btn:active{transform:scale(.96)}
-.btn.ghost{background:transparent;color:var(--scrub);box-shadow:inset 0 0 0 1.5px var(--scrub)}
-.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: 0;
+        background: var(--scrub);
+        color: var(--paper);
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        transition: transform 0.3s var(--spring);
+      }
+      .btn:active {
+        transform: scale(0.96);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--scrub);
+        box-shadow: inset 0 0 0 1.5px var(--scrub);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
 
-/* ============ PAGES: each fills the screen; scrolling snaps page to page ============ */
-main{max-width:480px;margin:0 auto}
-.page{position:relative;height:100svh;scroll-snap-align:start;scroll-snap-stop:always}
-.page.grow{height:auto;min-height:100svh}
-/* the 3D: --p is the page's offset in screens (−1 above, 0 in view, 1 below). Pages hinge on the edge they share,
+      /* ============ PAGES: each fills the screen; scrolling snaps page to page ============ */
+      main {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .page {
+        position: relative;
+        height: 100svh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      .page.grow {
+        height: auto;
+        min-height: 100svh;
+      }
+      /* the 3D: --p is the page's offset in screens (−1 above, 0 in view, 1 below). Pages hinge on the edge they share,
    so two neighbours fold like faces of a cube while you scroll */
-.pg{position:relative;isolation:isolate;height:100%;min-height:inherit;overflow:hidden;background:var(--paper);
-  display:flex;flex-direction:column;justify-content:center;padding:calc(env(safe-area-inset-top) + 56px) 20px calc(env(safe-area-inset-bottom) + 28px);text-align:center;
-  transform-origin:50% calc(50% - var(--p,0) * 50%);transform:perspective(1100px) rotateX(calc(var(--p,0) * -26deg)) scale(calc(1 - var(--a,0) * .07));will-change:transform}
-.pg::after{content:"";position:absolute;inset:0;z-index:20;pointer-events:none;background:var(--deep);opacity:calc(var(--a,0) * .55)}
-/* faded school photo behind a page */
-.pg::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--mo,none) center/cover;opacity:.11;filter:grayscale(1) contrast(.9)}
+      .pg {
+        position: relative;
+        isolation: isolate;
+        height: 100%;
+        min-height: inherit;
+        overflow: hidden;
+        background: var(--paper);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: calc(env(safe-area-inset-top) + 56px) 20px
+          calc(env(safe-area-inset-bottom) + 28px);
+        text-align: center;
+        transform-origin: 50% calc(50% - var(--p, 0) * 50%);
+        transform: perspective(1100px) rotateX(calc(var(--p, 0) * -26deg))
+          scale(calc(1 - var(--a, 0) * 0.07));
+        will-change: transform;
+      }
+      .pg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 20;
+        pointer-events: none;
+        background: var(--deep);
+        opacity: calc(var(--a, 0) * 0.55);
+      }
+      /* faded school photo behind a page */
+      .pg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--mo, none) center/cover;
+        opacity: 0.11;
+        filter: grayscale(1) contrast(0.9);
+      }
 
-/* ============ INTRO: tear the envelope, unfold the letter ============ */
-#intro{position:fixed;inset:0;z-index:50;isolation:isolate;display:grid;place-content:center;justify-items:center;gap:26px;padding:24px;text-align:center;
-  background:var(--paper);overflow:hidden;transition:opacity .9s ease}
-#intro::before{content:"";position:absolute;inset:0;z-index:-1;background:url(assets/mo-5.jpg) center/cover;opacity:.12;filter:grayscale(1)}
-#intro.done{opacity:0;pointer-events:none}
-.intro-head{font-size:min(11vw,46px);color:var(--scrub);transition:opacity .5s}
-.intro-hint{font:400 11px/1.4 var(--mono);letter-spacing:.06em;color:var(--muted);transition:opacity .4s}
-#intro.torn .intro-head,#intro.torn .intro-hint{opacity:0}
+      /* ============ INTRO: tear the envelope, unfold the letter ============ */
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        isolation: isolate;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 26px;
+        padding: 24px;
+        text-align: center;
+        background: var(--paper);
+        overflow: hidden;
+        transition: opacity 0.9s ease;
+      }
+      #intro::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: url(assets/mo-5.jpg) center/cover;
+        opacity: 0.12;
+        filter: grayscale(1);
+      }
+      #intro.done {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .intro-head {
+        font-size: min(11vw, 46px);
+        color: var(--scrub);
+        transition: opacity 0.5s;
+      }
+      .intro-hint {
+        font: 400 11px/1.4 var(--mono);
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        transition: opacity 0.4s;
+      }
+      #intro.torn .intro-head,
+      #intro.torn .intro-hint {
+        opacity: 0;
+      }
 
-.stage{--w:min(340px,84vw);position:relative;width:var(--w);height:calc(var(--w) * .72);perspective:1400px;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
-.stage:focus-visible{outline-offset:10px;border-radius:16px}
-.stage>*{position:absolute}
-.stage::after{content:"";position:absolute;left:8%;right:8%;bottom:-26px;height:22px;border-radius:50%;background:radial-gradient(closest-side,rgb(0 40 20/.28),transparent);transition:opacity .6s}
-.eb{transition:translate 1s cubic-bezier(.55,0,.75,.2),opacity .9s ease .1s}
-#intro.leave .eb{translate:0 70svh;opacity:0}
-#intro.leave .stage::after{opacity:0}
-.e-back{left:0;right:0;top:14%;bottom:0;z-index:1;border-radius:0 0 12px 12px;background:linear-gradient(#D9C69E,#E6D6B3 40%);clip-path:var(--zig-top)}
-.e-front{left:0;right:0;top:20%;bottom:0;z-index:3;border-radius:0 0 12px 12px;clip-path:var(--zig-top);
-  background:linear-gradient(170deg,#F7ECD4,#EFE0C0);display:flex;align-items:flex-end;justify-content:space-between;padding:0 20px 20px;text-align:left}
-.e-front::before{content:"";position:absolute;inset:8px;border:5px solid;pointer-events:none;
-  border-image:repeating-linear-gradient(-45deg,var(--scrub) 0 7px,transparent 7px 12px,#9DB8A4 12px 19px,transparent 19px 24px) 5}
-.addr small{display:block;font:600 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.addr b{display:block;margin-top:4px;font:400 min(9vw,36px)/1.15 var(--script);color:var(--scrub);max-width:9em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stamp{position:relative;width:50px;height:60px;margin-bottom:auto;margin-top:22px;display:grid;place-content:center;gap:2px;
-  background:var(--scrub);color:var(--paper);font:600 10px/1 var(--mono);letter-spacing:.08em;text-align:center;
-  outline:2px dashed #F7ECD4;outline-offset:-5px;box-shadow:0 0 0 3px #F7ECD4,0 0 0 4px rgb(0 66 37/.25)}
-.stamp i{font-style:normal;font-size:20px}
-.postmark{position:absolute;right:66px;top:34px;width:58px;height:58px;border-radius:50%;border:1.5px solid rgb(0 66 37/.45);display:grid;place-content:center;
-  font:600 9.5px/1.3 var(--mono);color:rgb(0 66 37/.6);rotate:-14deg}
-.strip-wrap,.peel{left:0;right:0;top:0;height:24%;z-index:4}
-.strip-wrap{clip-path:inset(-20px 0 -20px var(--t,0%))}
-.peel{z-index:5;clip-path:inset(-40px calc(100% - var(--t,0%)) -20px -20px);transform-origin:var(--t,0%) 100%;
-  transform:rotate(calc(var(--k,0) * -14deg)) translateY(calc(var(--k,0) * -10px))}
-.strip{position:absolute;inset:0;border-radius:12px 12px 0 0;background:linear-gradient(#F9F0DC,#F2E5C8);clip-path:var(--zig-bot);
-  display:grid;place-content:center;font:600 10px/1 var(--mono);letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
-.strip::after{content:"";position:absolute;left:10px;right:10px;bottom:9px;border-bottom:1.5px dashed rgb(0 66 37/.35)}
-.strip .dot{position:absolute;left:8%;bottom:4px;width:12px;height:12px;border-radius:50%;background:var(--tassel);box-shadow:0 0 0 5px rgb(194 31 58/.18);animation:swipe 2.2s var(--ease) infinite}
-#intro.tearing .dot,.peel .dot{display:none}
-#intro.torn .peel{transition:transform .8s cubic-bezier(.3,.6,.4,1),opacity .8s;transform:translate(30%,-160%) rotate(-28deg);opacity:0}
-.letter{left:7%;right:7%;top:17%;height:calc(var(--w) * .34);z-index:2;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.3,.7,.3,1)}
-#intro.rise .letter{transform:translateY(calc(var(--w) * -.36))}
-#intro.leave .letter{z-index:6;transform:translateY(calc(var(--w) * .07))}
-#intro.done .letter{transform:translateY(calc(var(--w) * .07)) scale(1.12);transition-duration:.9s}
-.pn{position:absolute;left:0;right:0;height:100%;transform-style:preserve-3d;transition:transform 1.1s cubic-bezier(.5,0,.2,1)}
-.pn .f,.pn .b{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:grid;place-content:center;gap:4px;
-  background:#FFFDF6;box-shadow:inset 0 0 0 10px #FFFDF6,inset 0 0 0 11px rgb(0 66 37/.25),0 1px 2px rgb(0 40 20/.12)}
-.pn .b{transform:rotateX(180deg);background:#F6EDD6;box-shadow:0 2px 6px rgb(0 40 20/.15)}
-.p-top{bottom:100%;transform-origin:50% 100%;transform:rotateX(-180deg) translateZ(-2px)}
-.p-bot{top:100%;transform-origin:50% 0;transform:rotateX(180deg) translateZ(-1px)}
-.p-top .f{background:linear-gradient(#FFFDF6 80%,#F3EAD3)}
-.p-bot .f{background:linear-gradient(#F3EAD3,#FFFDF6 20%)}
-#intro.unfold .p-top{transform:none}
-#intro.unfold .p-bot{transform:none;transition-delay:.5s}
-.pn .script{font-size:min(10vw,40px);color:var(--scrub)}
-.l-name{font-size:21px;color:var(--scrub)}
-.l-date{font:600 15px/1 var(--mono);letter-spacing:.1em;color:var(--ink)}
-.l-date i{font-style:normal;color:var(--tassel)}
+      .stage {
+        --w: min(340px, 84vw);
+        position: relative;
+        width: var(--w);
+        height: calc(var(--w) * 0.72);
+        perspective: 1400px;
+        touch-action: none;
+        cursor: grab;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .stage:focus-visible {
+        outline-offset: 10px;
+        border-radius: 16px;
+      }
+      .stage > * {
+        position: absolute;
+      }
+      .stage::after {
+        content: "";
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        bottom: -26px;
+        height: 22px;
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgb(0 40 20/0.28),
+          transparent
+        );
+        transition: opacity 0.6s;
+      }
+      .eb {
+        transition:
+          translate 1s cubic-bezier(0.55, 0, 0.75, 0.2),
+          opacity 0.9s ease 0.1s;
+      }
+      #intro.leave .eb {
+        translate: 0 70svh;
+        opacity: 0;
+      }
+      #intro.leave .stage::after {
+        opacity: 0;
+      }
+      .e-back {
+        left: 0;
+        right: 0;
+        top: 14%;
+        bottom: 0;
+        z-index: 1;
+        border-radius: 0 0 12px 12px;
+        background: linear-gradient(#d9c69e, #e6d6b3 40%);
+        clip-path: var(--zig-top);
+      }
+      .e-front {
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        z-index: 3;
+        border-radius: 0 0 12px 12px;
+        clip-path: var(--zig-top);
+        background: linear-gradient(170deg, #f7ecd4, #efe0c0);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 20px 20px;
+        text-align: left;
+      }
+      .e-front::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border: 5px solid;
+        pointer-events: none;
+        border-image: repeating-linear-gradient(
+            -45deg,
+            var(--scrub) 0 7px,
+            transparent 7px 12px,
+            #9db8a4 12px 19px,
+            transparent 19px 24px
+          )
+          5;
+      }
+      .addr small {
+        display: block;
+        font: 600 10px/1 var(--mono);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .addr b {
+        display: block;
+        margin-top: 4px;
+        font: 400 min(9vw, 36px)/1.15 var(--script);
+        color: var(--scrub);
+        max-width: 9em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .stamp {
+        position: relative;
+        width: 50px;
+        height: 60px;
+        margin-bottom: auto;
+        margin-top: 22px;
+        display: grid;
+        place-content: center;
+        gap: 2px;
+        background: var(--scrub);
+        color: var(--paper);
+        font: 600 10px/1 var(--mono);
+        letter-spacing: 0.08em;
+        text-align: center;
+        outline: 2px dashed #f7ecd4;
+        outline-offset: -5px;
+        box-shadow:
+          0 0 0 3px #f7ecd4,
+          0 0 0 4px rgb(0 66 37/0.25);
+      }
+      .stamp i {
+        font-style: normal;
+        font-size: 20px;
+      }
+      .postmark {
+        position: absolute;
+        right: 66px;
+        top: 34px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1.5px solid rgb(0 66 37/0.45);
+        display: grid;
+        place-content: center;
+        font: 600 9.5px/1.3 var(--mono);
+        color: rgb(0 66 37/0.6);
+        rotate: -14deg;
+      }
+      .strip-wrap,
+      .peel {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 24%;
+        z-index: 4;
+      }
+      .strip-wrap {
+        clip-path: inset(-20px 0 -20px var(--t, 0%));
+      }
+      .peel {
+        z-index: 5;
+        clip-path: inset(-40px calc(100% - var(--t, 0%)) -20px -20px);
+        transform-origin: var(--t, 0%) 100%;
+        transform: rotate(calc(var(--k, 0) * -14deg))
+          translateY(calc(var(--k, 0) * -10px));
+      }
+      .strip {
+        position: absolute;
+        inset: 0;
+        border-radius: 12px 12px 0 0;
+        background: linear-gradient(#f9f0dc, #f2e5c8);
+        clip-path: var(--zig-bot);
+        display: grid;
+        place-content: center;
+        font: 600 10px/1 var(--mono);
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+      .strip::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 9px;
+        border-bottom: 1.5px dashed rgb(0 66 37/0.35);
+      }
+      .strip .dot {
+        position: absolute;
+        left: 8%;
+        bottom: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--tassel);
+        box-shadow: 0 0 0 5px rgb(194 31 58/0.18);
+        animation: swipe 2.2s var(--ease) infinite;
+      }
+      #intro.tearing .dot,
+      .peel .dot {
+        display: none;
+      }
+      #intro.torn .peel {
+        transition:
+          transform 0.8s cubic-bezier(0.3, 0.6, 0.4, 1),
+          opacity 0.8s;
+        transform: translate(30%, -160%) rotate(-28deg);
+        opacity: 0;
+      }
+      .letter {
+        left: 7%;
+        right: 7%;
+        top: 17%;
+        height: calc(var(--w) * 0.34);
+        z-index: 2;
+        transform-style: preserve-3d;
+        transition: transform 1s cubic-bezier(0.3, 0.7, 0.3, 1);
+      }
+      #intro.rise .letter {
+        transform: translateY(calc(var(--w) * -0.36));
+      }
+      #intro.leave .letter {
+        z-index: 6;
+        transform: translateY(calc(var(--w) * 0.07));
+      }
+      #intro.done .letter {
+        transform: translateY(calc(var(--w) * 0.07)) scale(1.12);
+        transition-duration: 0.9s;
+      }
+      .pn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 1.1s cubic-bezier(0.5, 0, 0.2, 1);
+      }
+      .pn .f,
+      .pn .b {
+        position: absolute;
+        inset: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: grid;
+        place-content: center;
+        gap: 4px;
+        background: #fffdf6;
+        box-shadow:
+          inset 0 0 0 10px #fffdf6,
+          inset 0 0 0 11px rgb(0 66 37/0.25),
+          0 1px 2px rgb(0 40 20/0.12);
+      }
+      .pn .b {
+        transform: rotateX(180deg);
+        background: #f6edd6;
+        box-shadow: 0 2px 6px rgb(0 40 20/0.15);
+      }
+      .p-top {
+        bottom: 100%;
+        transform-origin: 50% 100%;
+        transform: rotateX(-180deg) translateZ(-2px);
+      }
+      .p-bot {
+        top: 100%;
+        transform-origin: 50% 0;
+        transform: rotateX(180deg) translateZ(-1px);
+      }
+      .p-top .f {
+        background: linear-gradient(#fffdf6 80%, #f3ead3);
+      }
+      .p-bot .f {
+        background: linear-gradient(#f3ead3, #fffdf6 20%);
+      }
+      #intro.unfold .p-top {
+        transform: none;
+      }
+      #intro.unfold .p-bot {
+        transform: none;
+        transition-delay: 0.5s;
+      }
+      .pn .script {
+        font-size: min(10vw, 40px);
+        color: var(--scrub);
+      }
+      .l-name {
+        font-size: 21px;
+        color: var(--scrub);
+      }
+      .l-date {
+        font: 600 15px/1 var(--mono);
+        letter-spacing: 0.1em;
+        color: var(--ink);
+      }
+      .l-date i {
+        font-style: normal;
+        color: var(--tassel);
+      }
 
-/* wax seal: one SVG symbol, used on the letter */
-.seal{width:70px;height:70px;filter:drop-shadow(0 6px 8px rgb(0 30 15/.35))}
+      /* wax seal: one SVG symbol, used on the letter */
+      .seal {
+        width: 70px;
+        height: 70px;
+        filter: drop-shadow(0 6px 8px rgb(0 30 15/0.35));
+      }
 
-/* ============ HERO: a heartbeat trace that writes her name ============ */
-.hero .pg{justify-content:flex-start;text-align:left;padding:0;
-  background:linear-gradient(rgb(0 66 37/.06) 1px,transparent 1px) 0 0/8px 8px,
-    linear-gradient(90deg,rgb(0 66 37/.06) 1px,transparent 1px) 0 0/8px 8px,var(--paper)}
-.hero .pg::before{opacity:.09}
-.mast{position:absolute;z-index:4;top:calc(env(safe-area-inset-top) + 18px);left:20px;right:76px;display:flex;justify-content:space-between;gap:12px}
-.trace{position:absolute;z-index:3;left:0;right:0;top:calc(env(safe-area-inset-top) + 9svh);aspect-ratio:390/90}
-.ecg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.ecg path{fill:none;stroke:var(--scrub);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
-.ecg .blip{fill:var(--tassel);transition:opacity .6s 2.8s}
-.sig{position:absolute;left:27%;bottom:calc(22% - .26em);font-size:min(21vw,100px);line-height:1;color:var(--scrub);white-space:nowrap}
-.hero-ppl{position:absolute;z-index:2;bottom:0;left:56%;height:72svh;width:auto;max-width:none;transform:translateX(-50%)}
-.hero-foot{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:110px 20px calc(env(safe-area-inset-bottom) + 22px);
-  background:linear-gradient(rgb(255 248 231/0),var(--paper) 55%)}
-.hero-foot .cond{font-size:min(11vw,46px);color:var(--scrub)}
-.hero-foot .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:10px}
+      /* ============ HERO: a heartbeat trace that writes her name ============ */
+      .hero .pg {
+        justify-content: flex-start;
+        text-align: left;
+        padding: 0;
+        background:
+          linear-gradient(rgb(0 66 37/0.06) 1px, transparent 1px) 0 0/8px 8px,
+          linear-gradient(90deg, rgb(0 66 37/0.06) 1px, transparent 1px) 0 0/8px
+            8px,
+          var(--paper);
+      }
+      .hero .pg::before {
+        opacity: 0.09;
+      }
+      .mast {
+        position: absolute;
+        z-index: 4;
+        top: calc(env(safe-area-inset-top) + 18px);
+        left: 20px;
+        right: 76px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .trace {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        top: calc(env(safe-area-inset-top) + 9svh);
+        aspect-ratio: 390/90;
+      }
+      .ecg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+      .ecg path {
+        fill: none;
+        stroke: var(--scrub);
+        stroke-width: 2;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
+      .ecg .blip {
+        fill: var(--tassel);
+        transition: opacity 0.6s 2.8s;
+      }
+      .sig {
+        position: absolute;
+        left: 27%;
+        bottom: calc(22% - 0.26em);
+        font-size: min(21vw, 100px);
+        line-height: 1;
+        color: var(--scrub);
+        white-space: nowrap;
+      }
+      .hero-ppl {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 56%;
+        height: 72svh;
+        width: auto;
+        max-width: none;
+        transform: translateX(-50%);
+      }
+      .hero-foot {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 110px 20px calc(env(safe-area-inset-bottom) + 22px);
+        background: linear-gradient(rgb(255 248 231/0), var(--paper) 55%);
+      }
+      .hero-foot .cond {
+        font-size: min(11vw, 46px);
+        color: var(--scrub);
+      }
+      .hero-foot .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 16px;
+        margin-top: 10px;
+      }
 
-.js .ecg path{stroke-dasharray:1;stroke-dashoffset:1}
-.js .sig{-webkit-mask:linear-gradient(90deg,#000 45%,transparent 55%) 0 0/250% 100% no-repeat;mask:linear-gradient(90deg,#000 45%,transparent 55%) 0 0/250% 100% no-repeat;
-  -webkit-mask-position:100% 0;mask-position:100% 0}
-.js .hero-ppl,.js .hero-foot,.js .mast{opacity:0;translate:0 30px}
-.js .hero-ppl{translate:0 14%}
-.js .opened .ecg path{stroke-dashoffset:0;transition:stroke-dashoffset 2.6s linear}
-.js .opened .sig{-webkit-mask-position:0 0;mask-position:0 0;transition:-webkit-mask-position 1.9s linear .7s,mask-position 1.9s linear .7s}
-.js .opened .hero-ppl{opacity:1;translate:0 0;transition:opacity 1s var(--ease) .2s,translate 1.4s var(--spring) .2s}
-.js .opened .hero-foot{opacity:1;translate:0 0;transition:opacity 1s var(--ease) 1.2s,translate 1s var(--ease) 1.2s}
-.js .opened .mast{opacity:1;translate:0 0;transition:opacity 1s var(--ease) .1s,translate 1s var(--ease) .1s}
-.js .opened .ecg .blip{opacity:0}
+      .js .ecg path {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+      }
+      .js .sig {
+        -webkit-mask: linear-gradient(90deg, #000 45%, transparent 55%) 0 0/250%
+          100% no-repeat;
+        mask: linear-gradient(90deg, #000 45%, transparent 55%) 0 0/250% 100%
+          no-repeat;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+      .js .hero-ppl,
+      .js .hero-foot,
+      .js .mast {
+        opacity: 0;
+        translate: 0 30px;
+      }
+      .js .hero-ppl {
+        translate: 0 14%;
+      }
+      .js .opened .ecg path {
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 2.6s linear;
+      }
+      .js .opened .sig {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+        transition:
+          -webkit-mask-position 1.9s linear 0.7s,
+          mask-position 1.9s linear 0.7s;
+      }
+      .js .opened .hero-ppl {
+        opacity: 1;
+        translate: 0 0;
+        transition:
+          opacity 1s var(--ease) 0.2s,
+          translate 1.4s var(--spring) 0.2s;
+      }
+      .js .opened .hero-foot {
+        opacity: 1;
+        translate: 0 0;
+        transition:
+          opacity 1s var(--ease) 1.2s,
+          translate 1s var(--ease) 1.2s;
+      }
+      .js .opened .mast {
+        opacity: 1;
+        translate: 0 0;
+        transition:
+          opacity 1s var(--ease) 0.1s,
+          translate 1s var(--ease) 0.1s;
+      }
+      .js .opened .ecg .blip {
+        opacity: 0;
+      }
 
-/* ============ GUEST BADGE: hangs from a lanyard and swings ============ */
-.moi .pg{justify-content:flex-start;padding-top:0}
-.hang{position:relative;transform-origin:50% 0;margin:0 auto;width:min(330px,88%)}
-.in.hang{animation:swing 2.6s cubic-bezier(.3,.6,.4,1) both,sway 7s ease-in-out 2.6s infinite}
-.strap{display:block;width:30px;height:calc(env(safe-area-inset-top) + 8svh);margin:0 auto;background:var(--scrub);color:rgb(255 248 231/.7);
-  font:600 8px/30px var(--mono);letter-spacing:.2em;writing-mode:vertical-rl;overflow:hidden;white-space:nowrap;text-align:center}
-.clip{display:block;width:40px;height:18px;margin:-2px auto -8px;position:relative;z-index:1;border-radius:4px;background:linear-gradient(#D9DDD8,#9AA39C);box-shadow:inset 0 -2px 0 rgb(0 0 0/.15)}
-.badge{border-radius:16px;background:#FFFDF6;overflow:hidden;text-align:left;box-shadow:0 30px 40px -24px rgb(0 30 15/.5),0 0 0 1px rgb(0 66 37/.08)}
-.b-head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 12px;background:var(--scrub);color:var(--paper)}
-.b-head .label{color:rgb(255 248 231/.75)}
-.b-body{padding:14px 18px 6px}
-.b-guest{font-size:min(11vw,44px);color:var(--scrub);margin:-2px 0 4px;overflow-wrap:anywhere}
-.b-text{font-size:13.5px;color:var(--muted)}
-.b-text b{color:var(--ink);font-weight:600}
-.b-date{display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:12px;margin:clamp(8px,2svh,16px) 0;padding:clamp(6px,1.5svh,12px) 0;border-block:1px solid var(--rule)}
-.b-date b{font-size:clamp(64px,13svh,104px);color:var(--scrub);grid-row:span 2;line-height:.8}
-.b-date .label{color:var(--ink)}
-.b-date .label.big{font:700 22px/1 var(--display);font-variation-settings:"wdth" 75;letter-spacing:0;color:var(--tassel)}
-.b-fields{display:grid;gap:clamp(4px,1svh,10px)}
-.b-fields div{display:grid;grid-template-columns:72px 1fr;gap:8px;align-items:baseline}
-.b-fields dd{font-size:14px;line-height:1.35;color:var(--ink)}
-.b-foot{display:block;width:100%;height:38px;margin-top:clamp(6px,1.5svh,12px);background:var(--sage)}
-.b-foot path{fill:none;stroke:var(--scrub);stroke-width:1.5;opacity:.7}
-.moi .actions{margin-top:clamp(14px,2.5svh,24px)}
+      /* ============ GUEST BADGE: hangs from a lanyard and swings ============ */
+      .moi .pg {
+        justify-content: flex-start;
+        padding-top: 0;
+      }
+      .hang {
+        position: relative;
+        transform-origin: 50% 0;
+        margin: 0 auto;
+        width: min(330px, 88%);
+      }
+      .in.hang {
+        animation:
+          swing 2.6s cubic-bezier(0.3, 0.6, 0.4, 1) both,
+          sway 7s ease-in-out 2.6s infinite;
+      }
+      .strap {
+        display: block;
+        width: 30px;
+        height: calc(env(safe-area-inset-top) + 8svh);
+        margin: 0 auto;
+        background: var(--scrub);
+        color: rgb(255 248 231/0.7);
+        font: 600 8px/30px var(--mono);
+        letter-spacing: 0.2em;
+        writing-mode: vertical-rl;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .clip {
+        display: block;
+        width: 40px;
+        height: 18px;
+        margin: -2px auto -8px;
+        position: relative;
+        z-index: 1;
+        border-radius: 4px;
+        background: linear-gradient(#d9ddd8, #9aa39c);
+        box-shadow: inset 0 -2px 0 rgb(0 0 0/0.15);
+      }
+      .badge {
+        border-radius: 16px;
+        background: #fffdf6;
+        overflow: hidden;
+        text-align: left;
+        box-shadow:
+          0 30px 40px -24px rgb(0 30 15/0.5),
+          0 0 0 1px rgb(0 66 37/0.08);
+      }
+      .b-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 18px 12px;
+        background: var(--scrub);
+        color: var(--paper);
+      }
+      .b-head .label {
+        color: rgb(255 248 231/0.75);
+      }
+      .b-body {
+        padding: 14px 18px 6px;
+      }
+      .b-guest {
+        font-size: min(11vw, 44px);
+        color: var(--scrub);
+        margin: -2px 0 4px;
+        overflow-wrap: anywhere;
+      }
+      .b-text {
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      .b-text b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .b-date {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: end;
+        column-gap: 12px;
+        margin: clamp(8px, 2svh, 16px) 0;
+        padding: clamp(6px, 1.5svh, 12px) 0;
+        border-block: 1px solid var(--rule);
+      }
+      .b-date b {
+        font-size: clamp(64px, 13svh, 104px);
+        color: var(--scrub);
+        grid-row: span 2;
+        line-height: 0.8;
+      }
+      .b-date .label {
+        color: var(--ink);
+      }
+      .b-date .label.big {
+        font: 700 22px/1 var(--display);
+        font-variation-settings: "wdth" 75;
+        letter-spacing: 0;
+        color: var(--tassel);
+      }
+      .b-fields {
+        display: grid;
+        gap: clamp(4px, 1svh, 10px);
+      }
+      .b-fields div {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 8px;
+        align-items: baseline;
+      }
+      .b-fields dd {
+        font-size: 14px;
+        line-height: 1.35;
+        color: var(--ink);
+      }
+      .b-foot {
+        display: block;
+        width: 100%;
+        height: 38px;
+        margin-top: clamp(6px, 1.5svh, 12px);
+        background: var(--sage);
+      }
+      .b-foot path {
+        fill: none;
+        stroke: var(--scrub);
+        stroke-width: 1.5;
+        opacity: 0.7;
+      }
+      .moi .actions {
+        margin-top: clamp(14px, 2.5svh, 24px);
+      }
 
-/* ============ POP-OUT FRAMES (bg + cut-out cropped from the same box; only the bg is clipped) ============ */
-.pop{position:relative;margin:0 auto;flex:none}
-.pop>*{position:absolute;inset:0;width:100%;height:100%}
-.pop .bg{clip-path:var(--c);transform:translateY(calc(var(--py,0) * 10px))}
-.pop .line{border:1.5px solid var(--scrub);opacity:.35}
-.pop .ppl{transform:translateY(calc(var(--py,0) * -14px));filter:drop-shadow(0 14px 18px rgb(0 40 20/.25))}
-.js .pop .bg{transition:clip-path 1.2s cubic-bezier(.65,0,.35,1)}
-.js .pop .ppl{transition:opacity .9s var(--ease) .5s,translate 1.3s var(--spring) .5s}
-.js .pop:not(.in) .bg{clip-path:var(--c0)}
-.js .pop:not(.in) .ppl{opacity:0;translate:0 9%}
-.wide{width:calc(100% + 40px);margin-inline:-20px;--c:inset(26% 6% 0 6% round 22px);--c0:inset(100% 6% 0 6% round 22px)}
-.wide .line{inset:calc(26% - 8px) calc(6% - 8px) -8px;width:auto;height:auto;border-radius:30px}
-.arch{height:30svh;aspect-ratio:840/1617;--c:inset(24% 9% 0 9% round 999px 999px 0 0);--c0:inset(100% 9% 0 9% round 999px 999px 0 0)}
-.arch .line{inset:calc(24% - 7px) calc(9% - 7px) -7px;width:auto;height:auto;border-bottom:0;border-radius:999px 999px 0 0}
-.round{height:min(48svh,96vw);aspect-ratio:900/905;--c:circle(37% at 50% 62%);--c0:circle(0% at 50% 62%)}
-.round .line{left:calc(13% - 8px);top:calc(25% - 8px);width:calc(74% + 16px);height:auto;aspect-ratio:1;border-radius:50%}
-.round .ppl{-webkit-mask:linear-gradient(#000 84%,transparent);mask:linear-gradient(#000 84%,transparent)}
+      /* ============ POP-OUT FRAMES (bg + cut-out cropped from the same box; only the bg is clipped) ============ */
+      .pop {
+        position: relative;
+        margin: 0 auto;
+        flex: none;
+      }
+      .pop > * {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .pop .bg {
+        clip-path: var(--c);
+        transform: translateY(calc(var(--py, 0) * 10px));
+      }
+      .pop .line {
+        border: 1.5px solid var(--scrub);
+        opacity: 0.35;
+      }
+      .pop .ppl {
+        transform: translateY(calc(var(--py, 0) * -14px));
+        filter: drop-shadow(0 14px 18px rgb(0 40 20/0.25));
+      }
+      .js .pop .bg {
+        transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      .js .pop .ppl {
+        transition:
+          opacity 0.9s var(--ease) 0.5s,
+          translate 1.3s var(--spring) 0.5s;
+      }
+      .js .pop:not(.in) .bg {
+        clip-path: var(--c0);
+      }
+      .js .pop:not(.in) .ppl {
+        opacity: 0;
+        translate: 0 9%;
+      }
+      .wide {
+        width: calc(100% + 40px);
+        margin-inline: -20px;
+        --c: inset(26% 6% 0 6% round 22px);
+        --c0: inset(100% 6% 0 6% round 22px);
+      }
+      .wide .line {
+        inset: calc(26% - 8px) calc(6% - 8px) -8px;
+        width: auto;
+        height: auto;
+        border-radius: 30px;
+      }
+      .arch {
+        height: 30svh;
+        aspect-ratio: 840/1617;
+        --c: inset(24% 9% 0 9% round 999px 999px 0 0);
+        --c0: inset(100% 9% 0 9% round 999px 999px 0 0);
+      }
+      .arch .line {
+        inset: calc(24% - 7px) calc(9% - 7px) -7px;
+        width: auto;
+        height: auto;
+        border-bottom: 0;
+        border-radius: 999px 999px 0 0;
+      }
+      .round {
+        height: min(48svh, 96vw);
+        aspect-ratio: 900/905;
+        --c: circle(37% at 50% 62%);
+        --c0: circle(0% at 50% 62%);
+      }
+      .round .line {
+        left: calc(13% - 8px);
+        top: calc(25% - 8px);
+        width: calc(74% + 16px);
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+      .round .ppl {
+        -webkit-mask: linear-gradient(#000 84%, transparent);
+        mask: linear-gradient(#000 84%, transparent);
+      }
 
-/* generic reveal */
-.js .r{transition:opacity 1s var(--ease),translate 1s var(--ease)}
-.js .r:not(.in){opacity:0;translate:0 24px}
-.js .script.r{padding:.1em .3em;margin-inline:-.3em;-webkit-mask:linear-gradient(90deg,#000 40%,transparent 60%) 0 0/250% 100% no-repeat;mask:linear-gradient(90deg,#000 40%,transparent 60%) 0 0/250% 100% no-repeat;
-  transition:-webkit-mask-position 1.6s cubic-bezier(.6,0,.2,1),mask-position 1.6s cubic-bezier(.6,0,.2,1)}
-.js .script.r:not(.in){opacity:1;translate:none;-webkit-mask-position:100% 0;mask-position:100% 0}
+      /* generic reveal */
+      .js .r {
+        transition:
+          opacity 1s var(--ease),
+          translate 1s var(--ease);
+      }
+      .js .r:not(.in) {
+        opacity: 0;
+        translate: 0 24px;
+      }
+      .js .script.r {
+        padding: 0.1em 0.3em;
+        margin-inline: -0.3em;
+        -webkit-mask: linear-gradient(90deg, #000 40%, transparent 60%) 0 0/250%
+          100% no-repeat;
+        mask: linear-gradient(90deg, #000 40%, transparent 60%) 0 0/250% 100%
+          no-repeat;
+        transition:
+          -webkit-mask-position 1.6s cubic-bezier(0.6, 0, 0.2, 1),
+          mask-position 1.6s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+      .js .script.r:not(.in) {
+        opacity: 1;
+        translate: none;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
 
-/* ============ PLACE + COUNTDOWN ============ */
-.h-script{font-size:min(12vw,52px);color:var(--scrub)}
-.h-cond{font-size:min(13vw,56px);color:var(--scrub)}
-.noi .h-script{margin-bottom:6px}
-.noi .addr2{margin-top:8px;font-size:13.5px;color:var(--muted)}
-.count{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:clamp(14px,3svh,28px) auto 0;width:100%;max-width:380px}
-.count span{background:var(--scrub);border-radius:12px;padding:10px 0 8px;font:600 9.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgb(191 240 212/.7)}
-.count b{display:block;margin-bottom:6px;font:700 34px/1 var(--display);font-variation-settings:"wdth" 75;color:#BFF0D4;font-variant-numeric:tabular-nums}
-.bump{animation:bump .5s var(--spring)}
+      /* ============ PLACE + COUNTDOWN ============ */
+      .h-script {
+        font-size: min(12vw, 52px);
+        color: var(--scrub);
+      }
+      .h-cond {
+        font-size: min(13vw, 56px);
+        color: var(--scrub);
+      }
+      .noi .h-script {
+        margin-bottom: 6px;
+      }
+      .noi .addr2 {
+        margin-top: 8px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      .count {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+        margin: clamp(14px, 3svh, 28px) auto 0;
+        width: 100%;
+        max-width: 380px;
+      }
+      .count span {
+        background: var(--scrub);
+        border-radius: 12px;
+        padding: 10px 0 8px;
+        font: 600 9.5px/1 var(--mono);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgb(191 240 212/0.7);
+      }
+      .count b {
+        display: block;
+        margin-bottom: 6px;
+        font: 700 34px/1 var(--display);
+        font-variation-settings: "wdth" 75;
+        color: #bff0d4;
+        font-variant-numeric: tabular-nums;
+      }
+      .bump {
+        animation: bump 0.5s var(--spring);
+      }
 
-/* ============ ALBUM ============ */
-.reel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:clamp(12px,2svh,22px) -20px 0;padding:14px 14% 26px;scrollbar-width:none;overscroll-behavior-x:contain}
-.reel::-webkit-scrollbar{display:none}
-.ph{flex:0 0 72%;scroll-snap-align:center;background:#fff;padding:9px 9px 30px;border-radius:3px;box-shadow:0 18px 30px -18px rgb(0 40 20/.5);rotate:-2deg}
-.ph:nth-child(even){rotate:2deg}
-.ph img{width:100%;height:min(46svh,100vw);object-fit:cover;border-radius:2px;background:var(--sage)}
-.ph figcaption{margin-top:9px;font:600 9.5px/1 var(--mono);letter-spacing:.12em;color:var(--muted);text-align:left}
+      /* ============ ALBUM ============ */
+      .reel {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin: clamp(12px, 2svh, 22px) -20px 0;
+        padding: 14px 14% 26px;
+        scrollbar-width: none;
+        overscroll-behavior-x: contain;
+      }
+      .reel::-webkit-scrollbar {
+        display: none;
+      }
+      .ph {
+        flex: 0 0 72%;
+        scroll-snap-align: center;
+        background: #fff;
+        padding: 9px 9px 30px;
+        border-radius: 3px;
+        box-shadow: 0 18px 30px -18px rgb(0 40 20/0.5);
+        rotate: -2deg;
+      }
+      .ph:nth-child(even) {
+        rotate: 2deg;
+      }
+      .ph img {
+        width: 100%;
+        height: min(46svh, 100vw);
+        object-fit: cover;
+        border-radius: 2px;
+        background: var(--sage);
+      }
+      .ph figcaption {
+        margin-top: 9px;
+        font: 600 9.5px/1 var(--mono);
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        text-align: left;
+      }
 
-/* ============ THANK-YOU ============ */
-.thanks .pg{gap:clamp(10px,2svh,18px)}
-.thanks p.body{font-size:14.5px;line-height:1.6;max-width:34ch;margin:0 auto;color:var(--ink)}
-.thanks .sign{font-size:44px;color:var(--scrub)}
+      /* ============ THANK-YOU ============ */
+      .thanks .pg {
+        gap: clamp(10px, 2svh, 18px);
+      }
+      .thanks p.body {
+        font-size: 14.5px;
+        line-height: 1.6;
+        max-width: 34ch;
+        margin: 0 auto;
+        color: var(--ink);
+      }
+      .thanks .sign {
+        font-size: 44px;
+        color: var(--scrub);
+      }
 
-/* ============ RSVP ============ */
-.hoi .pg{gap:clamp(8px,1.6svh,14px)}
-.hoi .when{font:600 11px/1.5 var(--mono);letter-spacing:.06em;color:var(--muted)}
-.hoi .actions{flex-direction:column;align-items:center}
-.hoi .btn{min-width:240px}
-.gb{display:grid;gap:clamp(10px,1.7svh,16px);width:100%;max-width:380px;margin:clamp(10px,2svh,20px) auto 0;text-align:left}
-.gb .f{display:grid;gap:5px;font:600 10.5px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--scrub)}
-.gb input:not([type=radio]),.gb select,.gb textarea{width:100%;font:400 16px/1.4 "Be Vietnam Pro",sans-serif;letter-spacing:0;text-transform:none;color:var(--ink);background:#FFFDF6;
-  border:1px solid rgb(0 66 37/.22);border-radius:12px;padding:11px 13px}
-.gb textarea{resize:none;height:clamp(70px,13svh,120px)}
-.gb input[type=file]{font-size:13px;padding:9px}
-.gb :is(input,select,textarea):focus-visible{outline:2px solid var(--scrub);outline-offset:1px}
-.choice{border:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.choice legend{font:600 10.5px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--scrub);margin-bottom:5px}
-.choice label{position:relative}
-.choice input{position:absolute;inset:0;opacity:0}
-.choice span{display:grid;place-items:center;min-height:44px;padding:6px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--scrub);color:var(--scrub);font-weight:600;font-size:14px;text-align:center;transition:background .2s,color .2s}
-.choice input:checked+span{background:var(--scrub);color:var(--paper)}
-.choice input:focus-visible+span{outline:2px solid var(--tassel);outline-offset:2px}
-.photo-row{display:flex;gap:10px;align-items:center}
-.photo-row input{flex:1}
-#preview{width:48px;height:48px;object-fit:cover;border-radius:10px}
-.hp{position:absolute;left:-9999px;width:1px;height:1px}
-.gb .btn{justify-self:center}
-.gb .btn:disabled{opacity:.6}
-.rsvp-msg{min-height:1.5em;text-align:center;font-size:14px;font-weight:500;color:var(--scrub)}
+      /* ============ RSVP ============ */
+      .hoi .pg {
+        gap: clamp(8px, 1.6svh, 14px);
+      }
+      .hoi .when {
+        font: 600 11px/1.5 var(--mono);
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+      .hoi .actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hoi .btn {
+        min-width: 240px;
+      }
+      .gb {
+        display: grid;
+        gap: clamp(10px, 1.7svh, 16px);
+        width: 100%;
+        max-width: 380px;
+        margin: clamp(10px, 2svh, 20px) auto 0;
+        text-align: left;
+      }
+      .gb .f {
+        display: grid;
+        gap: 5px;
+        font: 600 10.5px/1.3 var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--scrub);
+      }
+      .gb input:not([type="radio"]),
+      .gb select,
+      .gb textarea {
+        width: 100%;
+        font:
+          400 16px/1.4 "Be Vietnam Pro",
+          sans-serif;
+        letter-spacing: 0;
+        text-transform: none;
+        color: var(--ink);
+        background: #fffdf6;
+        border: 1px solid rgb(0 66 37/0.22);
+        border-radius: 12px;
+        padding: 11px 13px;
+      }
+      .gb textarea {
+        resize: none;
+        height: clamp(70px, 13svh, 120px);
+      }
+      .gb input[type="file"] {
+        font-size: 13px;
+        padding: 9px;
+      }
+      .gb :is(input, select, textarea):focus-visible {
+        outline: 2px solid var(--scrub);
+        outline-offset: 1px;
+      }
+      .choice {
+        border: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .choice legend {
+        font: 600 10.5px/1.3 var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--scrub);
+        margin-bottom: 5px;
+      }
+      .choice label {
+        position: relative;
+      }
+      .choice input {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+      }
+      .choice span {
+        display: grid;
+        place-items: center;
+        min-height: 44px;
+        padding: 6px;
+        border-radius: 999px;
+        box-shadow: inset 0 0 0 1.5px var(--scrub);
+        color: var(--scrub);
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .choice input:checked + span {
+        background: var(--scrub);
+        color: var(--paper);
+      }
+      .choice input:focus-visible + span {
+        outline: 2px solid var(--tassel);
+        outline-offset: 2px;
+      }
+      .photo-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .photo-row input {
+        flex: 1;
+      }
+      #preview {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+      }
+      .gb .btn {
+        justify-self: center;
+      }
+      .gb .btn:disabled {
+        opacity: 0.6;
+      }
+      .rsvp-msg {
+        min-height: 1.5em;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--scrub);
+      }
 
-/* ============ GUESTBOOK WALL ============ */
-.so .pg{justify-content:flex-start;padding-top:calc(env(safe-area-inset-top) + 72px)}
-.wall-list{display:grid;gap:16px;margin-top:22px;text-align:left}
-.wish{background:#FFFDF6;border-radius:14px;padding:16px 18px;box-shadow:0 14px 26px -18px rgb(0 40 20/.45)}
-.wish h4{font:700 20px/1.1 var(--display);font-variation-settings:"wdth" 75;text-transform:uppercase;color:var(--scrub)}
-.wish p{margin-top:4px;white-space:pre-line;overflow-wrap:anywhere}
-.wish img{width:100%;margin-top:12px;border-radius:10px;background:var(--sage)}
-.empty{margin-top:22px;color:var(--muted)}
-.empty a{color:var(--scrub);font-weight:600}
-footer{margin-top:auto;padding-top:56px}
-footer .script{font-size:42px;color:var(--scrub)}
+      /* ============ GUESTBOOK WALL ============ */
+      .so .pg {
+        justify-content: flex-start;
+        padding-top: calc(env(safe-area-inset-top) + 72px);
+      }
+      .wall-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        text-align: left;
+      }
+      .wish {
+        background: #fffdf6;
+        border-radius: 14px;
+        padding: 16px 18px;
+        box-shadow: 0 14px 26px -18px rgb(0 40 20/0.45);
+      }
+      .wish h4 {
+        font: 700 20px/1.1 var(--display);
+        font-variation-settings: "wdth" 75;
+        text-transform: uppercase;
+        color: var(--scrub);
+      }
+      .wish p {
+        margin-top: 4px;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
+      }
+      .wish img {
+        width: 100%;
+        margin-top: 12px;
+        border-radius: 10px;
+        background: var(--sage);
+      }
+      .empty {
+        margin-top: 22px;
+        color: var(--muted);
+      }
+      .empty a {
+        color: var(--scrub);
+        font-weight: 600;
+      }
+      footer {
+        margin-top: auto;
+        padding-top: 56px;
+      }
+      footer .script {
+        font-size: 42px;
+        color: var(--scrub);
+      }
 
-/* ============ CHROME: sound + page dots ============ */
-.sound{position:fixed;z-index:40;top:calc(env(safe-area-inset-top) + 12px);right:max(12px,calc((100vw - 480px) / 2 + 12px));width:42px;height:42px;border-radius:50%;
-  border:1px solid rgb(0 66 37/.2);background:rgb(255 248 231/.85);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--scrub);font-size:17px}
-.sound[aria-pressed=true]{background:var(--scrub);color:var(--paper);animation:spin 6s linear infinite}
-.dots{position:fixed;z-index:40;right:max(6px,calc((100vw - 480px) / 2 + 6px));top:50%;translate:0 -50%;display:grid;gap:4px}
-.dots button{width:18px;height:18px;border:0;background:none;display:grid;place-items:center}
-.dots button::before{content:"";width:5px;height:5px;border-radius:50%;background:rgb(0 66 37/.28);transition:height .3s var(--ease),background .3s}
-.dots button[aria-current=true]::before{height:16px;border-radius:3px;background:var(--scrub)}
-#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+      /* ============ CHROME: sound + page dots ============ */
+      .sound {
+        position: fixed;
+        z-index: 40;
+        top: calc(env(safe-area-inset-top) + 12px);
+        right: max(12px, calc((100vw - 480px) / 2 + 12px));
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgb(0 66 37/0.2);
+        background: rgb(255 248 231/0.85);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        color: var(--scrub);
+        font-size: 17px;
+      }
+      .sound[aria-pressed="true"] {
+        background: var(--scrub);
+        color: var(--paper);
+        animation: spin 6s linear infinite;
+      }
+      .dots {
+        position: fixed;
+        z-index: 40;
+        right: max(6px, calc((100vw - 480px) / 2 + 6px));
+        top: 50%;
+        translate: 0 -50%;
+        display: grid;
+        gap: 4px;
+      }
+      .dots button {
+        width: 18px;
+        height: 18px;
+        border: 0;
+        background: none;
+        display: grid;
+        place-items: center;
+      }
+      .dots button::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgb(0 66 37/0.28);
+        transition:
+          height 0.3s var(--ease),
+          background 0.3s;
+      }
+      .dots button[aria-current="true"]::before {
+        height: 16px;
+        border-radius: 3px;
+        background: var(--scrub);
+      }
+      #fx {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 60;
+      }
 
-@keyframes swipe{0%{left:6%;opacity:0}15%{opacity:1}80%{opacity:1}100%{left:88%;opacity:0}}
-@keyframes swing{0%{rotate:9deg;translate:0 -40px;opacity:0}18%{opacity:1;translate:0 0}35%{rotate:-6deg}55%{rotate:3.5deg}75%{rotate:-1.5deg}100%{rotate:0deg}}
-@keyframes sway{50%{rotate:.8deg}}
-@keyframes bump{from{transform:translateY(-35%);opacity:.2}}
-@keyframes spin{to{rotate:360deg}}
-@media (prefers-reduced-motion:reduce){
-  *,::before,::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
-  html{scroll-snap-type:none}
-}
-</style>
-<script>document.documentElement.classList.add('js')</script>
-</head>
-<body class="locked">
+      @keyframes swipe {
+        0% {
+          left: 6%;
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          left: 88%;
+          opacity: 0;
+        }
+      }
+      @keyframes swing {
+        0% {
+          rotate: 9deg;
+          translate: 0 -40px;
+          opacity: 0;
+        }
+        18% {
+          opacity: 1;
+          translate: 0 0;
+        }
+        35% {
+          rotate: -6deg;
+        }
+        55% {
+          rotate: 3.5deg;
+        }
+        75% {
+          rotate: -1.5deg;
+        }
+        100% {
+          rotate: 0deg;
+        }
+      }
+      @keyframes sway {
+        50% {
+          rotate: 0.8deg;
+        }
+      }
+      @keyframes bump {
+        from {
+          transform: translateY(-35%);
+          opacity: 0.2;
+        }
+      }
+      @keyframes spin {
+        to {
+          rotate: 360deg;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation: none !important;
+          transition-duration: 0.01ms !important;
+          transition-delay: 0s !important;
+        }
+        html {
+          scroll-snap-type: none;
+        }
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body class="locked">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <radialGradient id="wax" cx="36%" cy="30%" r="78%">
+          <stop offset="0" stop-color="#2E7A54" />
+          <stop offset=".5" stop-color="#0A4A2B" />
+          <stop offset="1" stop-color="#012413" />
+        </radialGradient>
+        <filter id="waxEdge" x="-15%" y="-15%" width="130%" height="130%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".045"
+            numOctaves="2"
+            seed="4"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            scale="8"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+        <!-- wax seal: irregular poured edge, a pressed ring, and a script monogram stamped into the wax (dark recess + light lip) -->
+        <symbol id="sealSym" viewBox="0 0 100 100">
+          <circle
+            cx="50"
+            cy="50"
+            r="43"
+            fill="url(#wax)"
+            filter="url(#waxEdge)"
+          />
+          <circle
+            cx="50.7"
+            cy="50.7"
+            r="32"
+            fill="none"
+            stroke="#7DBB98"
+            stroke-opacity=".35"
+            stroke-width="1.3"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="32"
+            fill="none"
+            stroke="#011A0D"
+            stroke-opacity=".6"
+            stroke-width="1.3"
+          />
+          <text
+            x="49.8"
+            y="58.8"
+            text-anchor="middle"
+            font-family="Great Vibes, cursive"
+            font-size="27"
+            fill="#7DBB98"
+            fill-opacity=".45"
+          >
+            AT
+          </text>
+          <text
+            x="49"
+            y="58"
+            text-anchor="middle"
+            font-family="Great Vibes, cursive"
+            font-size="27"
+            fill="#021C0E"
+          >
+            AT
+          </text>
+          <text
+            x="50"
+            y="74.5"
+            text-anchor="middle"
+            font-family="JetBrains Mono, monospace"
+            font-size="5"
+            letter-spacing="1.6"
+            fill="#7DBB98"
+            fill-opacity=".6"
+          >
+            2026
+          </text>
+        </symbol>
+      </defs>
+    </svg>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <radialGradient id="wax" cx="36%" cy="30%" r="78%"><stop offset="0" stop-color="#2E7A54"/><stop offset=".5" stop-color="#0A4A2B"/><stop offset="1" stop-color="#012413"/></radialGradient>
-    <filter id="waxEdge" x="-15%" y="-15%" width="130%" height="130%">
-      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="4"/>
-      <feDisplacementMap in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <!-- wax seal: irregular poured edge, a pressed ring, and a script monogram stamped into the wax (dark recess + light lip) -->
-    <symbol id="sealSym" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="43" fill="url(#wax)" filter="url(#waxEdge)"/>
-      <circle cx="50.7" cy="50.7" r="32" fill="none" stroke="#7DBB98" stroke-opacity=".35" stroke-width="1.3"/>
-      <circle cx="50" cy="50" r="32" fill="none" stroke="#011A0D" stroke-opacity=".6" stroke-width="1.3"/>
-      <text x="49.8" y="58.8" text-anchor="middle" font-family="Great Vibes, cursive" font-size="27" fill="#7DBB98" fill-opacity=".45">AT</text>
-      <text x="49" y="58" text-anchor="middle" font-family="Great Vibes, cursive" font-size="27" fill="#021C0E">AT</text>
-      <text x="50" y="74.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="5" letter-spacing="1.6" fill="#7DBB98" fill-opacity=".6">2026</text>
-    </symbol>
-  </defs>
-</svg>
-
-<!-- ============ INTRO ============ -->
-<div id="intro">
-  <p class="script intro-head">Bạn có một lá thư</p>
-  <div class="stage" id="env" role="button" tabindex="0" aria-label="Xé phong bì để mở thư mời">
-    <div class="e-back eb"></div>
-    <div class="letter" aria-hidden="true">
-      <div class="pn p-mid"><div class="f"><p class="cond l-name">Nguyễn Trúc Anh Thư</p><p class="label">trân trọng mời <span class="to-name">bạn</span></p></div></div>
-      <div class="pn p-top"><div class="f"><p class="label">Thư mời dự</p><p class="script">Lễ Tốt Nghiệp</p></div><div class="b"><svg class="seal"><use href="#sealSym"/></svg></div></div>
-      <div class="pn p-bot"><div class="f"><p class="l-date">15:00 <i>·</i> 04.12.2026</p><p class="label">ĐH Y khoa Phạm Ngọc Thạch</p></div><div class="b"></div></div>
-    </div>
-    <div class="e-front eb">
-      <div class="addr"><small>Thân gửi</small><b class="to-name">những người thân yêu</b></div>
-      <div class="stamp"><i>🎓</i>2026</div>
-      <div class="postmark">04.12<br>2026</div>
-    </div>
-    <div class="strip-wrap eb"><div class="strip">Xé ở đây<span class="dot"></span></div></div>
-    <div class="peel" aria-hidden="true"><div class="strip">Xé ở đây</div></div>
-  </div>
-  <p class="intro-hint">Vuốt ngang mép trên để xé thư · nhớ bật loa nhé ♪</p>
-</div>
-
-<audio id="music" src="assets/bg-music.mp3" loop preload="auto"></audio>
-<button class="sound" id="soundBtn" aria-pressed="false" aria-label="Bật hoặc tắt nhạc" hidden>♪</button>
-<nav class="dots" id="dots" aria-label="Các trang của thiệp" hidden></nav>
-
-<main>
-  <!-- 1. hero -->
-  <section class="page hero" id="hero" data-name="Mở đầu">
-    <div class="pg" style="--mo:url(assets/mo-3.jpg)">
-      <header class="mast"><span class="label">ĐH Y khoa Phạm Ngọc Thạch</span><span class="label">04.12.2026</span></header>
-      <div class="trace">
-        <svg class="ecg" viewBox="0 0 390 90" aria-hidden="true">
-          <path id="ecgPath" pathLength="1" d="M0 70H22l5-5 5 5h7l4-40 7 58 5-26 4 8h9l7-6 7 6H390"/>
-          <circle class="blip" r="3.5" cx="0" cy="0"><animateMotion id="blipRun" dur="2.6s" begin="indefinite" fill="freeze"><mpath href="#ecgPath"/></animateMotion></circle>
-        </svg>
-        <h1 class="script sig">Anh Thư</h1>
-      </div>
-      <img class="hero-ppl" src="assets/hero-nguoi.webp" alt="Anh Thư đội mũ tốt nghiệp, ôm bó hoa hồng" fetchpriority="high">
-      <div class="hero-foot">
-        <p class="cond">Nguyễn Trúc<br>Anh Thư</p>
-        <div class="row"><span class="label">Nurse Anesthetist</span><span class="label">Vuốt lên ↑</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. guest badge = the invitation, with every detail -->
-  <section class="page moi" data-name="Thư mời">
-    <div class="pg" style="--mo:url(assets/mo-1.jpg)">
-      <div class="hang r">
-        <span class="strap" aria-hidden="true">PHẠM NGỌC THẠCH · TỐT NGHIỆP 2026 · PHẠM NGỌC THẠCH · TỐT NGHIỆP 2026</span>
-        <span class="clip" aria-hidden="true"></span>
-        <article class="badge">
-          <header class="b-head"><span class="label">Thẻ khách mời</span><span class="label">PNT · 2026</span></header>
-          <div class="b-body">
-            <p class="label">Thân mời</p>
-            <p class="script b-guest to-guest">Gia đình &amp; Bạn bè</p>
-            <p class="b-text">tới dự lễ tốt nghiệp của <b>Nguyễn Trúc Anh Thư</b>, Nurse Anesthetist</p>
-            <div class="b-date"><b class="cond" id="cDay">04</b><span class="label" id="cMonthYear">Tháng 12 · 2026</span><span class="label big" id="cTime">13:00 · Thứ Sáu</span></div>
-            <dl class="b-fields">
-              <div><dt class="label">Địa điểm</dt><dd>Trường Đại học Y khoa Phạm Ngọc Thạch, cơ sở 2</dd></div>
-              <div><dt class="label">Địa chỉ</dt><dd>567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh</dd></div>
-            </dl>
+    <!-- ============ INTRO ============ -->
+    <div id="intro">
+      <p class="script intro-head">Bạn có một lá thư</p>
+      <div
+        class="stage"
+        id="env"
+        role="button"
+        tabindex="0"
+        aria-label="Xé phong bì để mở thư mời"
+      >
+        <div class="e-back eb"></div>
+        <div class="letter" aria-hidden="true">
+          <div class="pn p-mid">
+            <div class="f">
+              <p class="cond l-name">Nguyễn Trúc Anh Thư</p>
+              <p class="label">
+                trân trọng mời <span class="to-name">bạn</span>
+              </p>
+            </div>
           </div>
-          <svg class="b-foot" viewBox="0 0 330 38" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22H120l4-4 4 4h6l4-16 5 26 4-14 3 4h8l5-4 5 4H330"/></svg>
-        </article>
+          <div class="pn p-top">
+            <div class="f">
+              <p class="label">Thư mời dự</p>
+              <p class="script">Lễ Tốt Nghiệp</p>
+            </div>
+            <div class="b">
+              <svg class="seal"><use href="#sealSym" /></svg>
+            </div>
+          </div>
+          <div class="pn p-bot">
+            <div class="f">
+              <p class="l-date">16:00 <i>·</i> 04.12.2026</p>
+              <p class="label">ĐH Y khoa Phạm Ngọc Thạch</p>
+            </div>
+            <div class="b"></div>
+          </div>
+        </div>
+        <div class="e-front eb">
+          <div class="addr">
+            <small>Thân gửi</small><b class="to-name">những người thân yêu</b>
+          </div>
+          <div class="stamp"><i>🎓</i>2026</div>
+          <div class="postmark">04.12<br />2026</div>
+        </div>
+        <div class="strip-wrap eb">
+          <div class="strip">Xé ở đây<span class="dot"></span></div>
+        </div>
+        <div class="peel" aria-hidden="true">
+          <div class="strip">Xé ở đây</div>
+        </div>
       </div>
-      <div class="actions r">
-        <a class="btn" id="dirLink" target="_blank" rel="noopener">Xem chỉ đường</a>
-        <button class="btn ghost" data-ics>Thêm vào lịch</button>
-      </div>
+      <p class="intro-hint">
+        Vuốt ngang mép trên để xé thư · nhớ bật loa nhé ♪
+      </p>
     </div>
-  </section>
 
-  <!-- 3. place + countdown -->
-  <section class="page noi" data-name="Địa điểm">
-    <div class="pg" style="--mo:url(assets/mo-5.jpg)">
-      <p class="script h-script r">Hẹn nhau ở đây nha</p>
-      <figure class="pop wide" style="aspect-ratio:1100/922">
-        <img class="bg" src="assets/noi-nen.jpg" alt="" loading="lazy">
-        <i class="line" aria-hidden="true"></i>
-        <img class="ppl" src="assets/noi-nguoi.webp" alt="Anh Thư tung khăn choàng trước toà nhà Đại học Y khoa Phạm Ngọc Thạch" loading="lazy">
-      </figure>
-      <p class="addr2 r">Cơ sở 2 · 567 Nguyễn Cửu Phú, Tân Nhựt</p>
-      <div class="count r" aria-label="Thời gian còn lại tới buổi lễ">
-        <span><b id="cd-d">0</b>ngày</span><span><b id="cd-h">00</b>giờ</span><span><b id="cd-m">00</b>phút</span><span><b id="cd-s">00</b>giây</span>
-      </div>
-    </div>
-  </section>
+    <audio id="music" src="assets/bg-music.mp3" loop preload="auto"></audio>
+    <button
+      class="sound"
+      id="soundBtn"
+      aria-pressed="false"
+      aria-label="Bật hoặc tắt nhạc"
+      hidden
+    >
+      ♪
+    </button>
+    <nav class="dots" id="dots" aria-label="Các trang của thiệp" hidden></nav>
 
-  <!-- 4. album -->
-  <section class="page album" data-name="Album">
-    <div class="pg" style="--mo:url(assets/mo-4.jpg)">
-      <p class="script h-script r">Những khoảnh khắc</p>
-      <div class="reel r" tabindex="0" aria-label="Album ảnh, vuốt ngang để xem thêm">
-        <figure class="ph"><img src="assets/album/2.jpg" alt="Anh Thư ôm bó hoa hồng" loading="lazy"><figcaption>01 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/3.jpg" alt="Anh Thư cầm bằng tốt nghiệp trước bảng tên trường" loading="lazy"><figcaption>02 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/5.jpg" alt="Anh Thư tung khăn choàng trước toà nhà trường" loading="lazy"><figcaption>03 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/4.jpg" alt="Anh Thư trong váy trắng ở sảnh trường" loading="lazy"><figcaption>04 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/6.jpg" alt="Anh Thư cười, tóc bay trong gió" loading="lazy"><figcaption>05 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/1.jpg" alt="Anh Thư ngoái nhìn, ôm bằng tốt nghiệp" loading="lazy"><figcaption>06 / 07</figcaption></figure>
-        <figure class="ph"><img src="assets/album/7.jpg" alt="Anh Thư ngước nhìn giếng trời của trường" loading="lazy"><figcaption>07 / 07</figcaption></figure>
-      </div>
-      <p class="label r">Vuốt ngang để xem thêm →</p>
-    </div>
-  </section>
+    <main>
+      <!-- 1. hero -->
+      <section class="page hero" id="hero" data-name="Mở đầu">
+        <div class="pg" style="--mo: url(assets/mo-3.jpg)">
+          <header class="mast">
+            <span class="label">ĐH Y khoa Phạm Ngọc Thạch</span
+            ><span class="label">04.12.2026</span>
+          </header>
+          <div class="trace">
+            <svg class="ecg" viewBox="0 0 390 90" aria-hidden="true">
+              <path
+                id="ecgPath"
+                pathLength="1"
+                d="M0 70H22l5-5 5 5h7l4-40 7 58 5-26 4 8h9l7-6 7 6H390"
+              />
+              <circle class="blip" r="3.5" cx="0" cy="0">
+                <animateMotion
+                  id="blipRun"
+                  dur="2.6s"
+                  begin="indefinite"
+                  fill="freeze"
+                >
+                  <mpath href="#ecgPath" />
+                </animateMotion>
+              </circle>
+            </svg>
+            <h1 class="script sig">Anh Thư</h1>
+          </div>
+          <img
+            class="hero-ppl"
+            src="assets/hero-nguoi.webp"
+            alt="Anh Thư đội mũ tốt nghiệp, ôm bó hoa hồng"
+            fetchpriority="high"
+          />
+          <div class="hero-foot">
+            <p class="cond">Nguyễn Trúc<br />Anh Thư</p>
+            <div class="row">
+              <span class="label">Nurse Anesthetist</span
+              ><span class="label">Vuốt lên ↑</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- 5. thank-you -->
-  <section class="page thanks" data-name="Lời cảm ơn">
-    <div class="pg" style="--mo:url(assets/mo-1.jpg)">
-      <figure class="pop arch">
-        <img class="bg" src="assets/moi-nen.jpg" alt="" loading="lazy">
-        <i class="line" aria-hidden="true"></i>
-        <img class="ppl" src="assets/moi-nguoi.webp" alt="Anh Thư trong váy trắng và khăn choàng tốt nghiệp" loading="lazy">
-      </figure>
-      <h2 class="cond h-cond r">Lời cảm ơn</h2>
-      <p class="body r">Những năm tháng ở Phạm Ngọc Thạch là những ca trực xuyên đêm, những mùa thi tưởng chừng không qua nổi, và cả những lần Thư muốn buông tay.</p>
-      <p class="body r">Thư đi được tới hôm nay là nhờ gia đình luôn ở phía sau, thầy cô kiên nhẫn chỉ dạy từng chút, và bạn bè cùng Thư gồng qua từng kỳ thi. Cảm ơn mọi người đã thương Thư, tin Thư và ở bên Thư suốt chặng đường này.</p>
-      <p class="script sign r">Anh Thư</p>
-    </div>
-  </section>
+      <!-- 2. guest badge = the invitation, with every detail -->
+      <section class="page moi" data-name="Thư mời">
+        <div class="pg" style="--mo: url(assets/mo-1.jpg)">
+          <div class="hang r">
+            <span class="strap" aria-hidden="true"
+              >PHẠM NGỌC THẠCH · TỐT NGHIỆP 2026 · PHẠM NGỌC THẠCH · TỐT NGHIỆP
+              2026</span
+            >
+            <span class="clip" aria-hidden="true"></span>
+            <article class="badge">
+              <header class="b-head">
+                <span class="label">Thẻ khách mời</span
+                ><span class="label">PNT · 2026</span>
+              </header>
+              <div class="b-body">
+                <p class="label">Thân mời</p>
+                <p class="script b-guest to-guest">Gia đình &amp; Bạn bè</p>
+                <p class="b-text">
+                  tới dự lễ tốt nghiệp của <b>Nguyễn Trúc Anh Thư</b>, Nurse
+                  Anesthetist
+                </p>
+                <div class="b-date">
+                  <b class="cond" id="cDay">04</b
+                  ><span class="label" id="cMonthYear">Tháng 12 · 2026</span
+                  ><span class="label big" id="cTime">13:00 · Thứ Sáu</span>
+                </div>
+                <dl class="b-fields">
+                  <div>
+                    <dt class="label">Địa điểm</dt>
+                    <dd>Trường Đại học Y khoa Phạm Ngọc Thạch, cơ sở 2</dd>
+                  </div>
+                  <div>
+                    <dt class="label">Địa chỉ</dt>
+                    <dd>567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh</dd>
+                  </div>
+                </dl>
+              </div>
+              <svg
+                class="b-foot"
+                viewBox="0 0 330 38"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M0 22H120l4-4 4 4h6l4-16 5 26 4-14 3 4h8l5-4 5 4H330"
+                />
+              </svg>
+            </article>
+          </div>
+          <div class="actions r">
+            <a class="btn" id="dirLink" target="_blank" rel="noopener"
+              >Xem chỉ đường</a
+            >
+            <button class="btn ghost" data-ics>Thêm vào lịch</button>
+          </div>
+        </div>
+      </section>
 
-  <!-- 6. will you come? -->
-  <section class="page hoi" data-name="Hồi âm">
-    <div class="pg" style="--mo:url(assets/mo-5.jpg)">
-      <figure class="pop round">
-        <img class="bg" src="assets/hoi-nen.jpg" alt="" loading="lazy">
-        <i class="line" aria-hidden="true"></i>
-        <img class="ppl" src="assets/hoi-nguoi.webp" alt="Anh Thư một tay giữ mũ, tay cầm bằng tốt nghiệp" loading="lazy">
-      </figure>
-      <p class="script h-script r"><span class="to-name">Bạn</span> sẽ đến chứ?</p>
-      <p class="when r" id="rsvpWhen"></p>
-      <div class="actions r">
-        <button class="btn" data-pick="yes">Chắc chắn rồi!</button>
-        <button class="btn ghost" data-pick="no">Tiếc quá, mình bận</button>
-      </div>
-    </div>
-  </section>
+      <!-- 3. place + countdown -->
+      <section class="page noi" data-name="Địa điểm">
+        <div class="pg" style="--mo: url(assets/mo-5.jpg)">
+          <p class="script h-script r">Hẹn nhau ở đây nha</p>
+          <figure class="pop wide" style="aspect-ratio: 1100/922">
+            <img class="bg" src="assets/noi-nen.jpg" alt="" loading="lazy" />
+            <i class="line" aria-hidden="true"></i>
+            <img
+              class="ppl"
+              src="assets/noi-nguoi.webp"
+              alt="Anh Thư tung khăn choàng trước toà nhà Đại học Y khoa Phạm Ngọc Thạch"
+              loading="lazy"
+            />
+          </figure>
+          <p class="addr2 r">Cơ sở 2 · 567 Nguyễn Cửu Phú, Tân Nhựt</p>
+          <div class="count r" aria-label="Thời gian còn lại tới buổi lễ">
+            <span><b id="cd-d">0</b>ngày</span
+            ><span><b id="cd-h">00</b>giờ</span
+            ><span><b id="cd-m">00</b>phút</span
+            ><span><b id="cd-s">00</b>giây</span>
+          </div>
+        </div>
+      </section>
 
-  <!-- 7. RSVP + guestbook form -->
-  <section class="page gui" id="gui" data-name="Lưu bút">
-    <div class="pg" style="--mo:url(assets/mo-3.jpg)">
-      <h2 class="cond h-cond r">Lưu bút cho Thư</h2>
-      <form class="gb r" id="gb" novalidate>
-        <label class="f">Tên của bạn<input name="name" maxlength="60" autocomplete="name" required></label>
-        <fieldset class="choice">
-          <legend>Bạn sẽ đến chứ?</legend>
-          <label><input type="radio" name="attend" value="yes" required><span>Chắc chắn rồi!</span></label>
-          <label><input type="radio" name="attend" value="no"><span>Tiếc quá, mình bận</span></label>
-        </fieldset>
-        <label class="f" id="guestsField" hidden>Bạn đi mấy người (tính cả bạn)?
-          <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
-        <label class="f">Lời chúc<textarea name="message" maxlength="1000" placeholder="Viết vài dòng chúc mừng Thư nha…"></textarea></label>
-        <label class="f">Kèm một tấm ảnh (không bắt buộc)
-          <span class="photo-row"><input type="file" name="photo" accept="image/*"><img id="preview" alt="Ảnh bạn chọn" hidden></span></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn" type="submit" id="gbBtn">Gửi cho Thư</button>
-        <p class="rsvp-msg" id="rsvpMsg" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
+      <!-- 4. album -->
+      <section class="page album" data-name="Album">
+        <div class="pg" style="--mo: url(assets/mo-4.jpg)">
+          <p class="script h-script r">Những khoảnh khắc</p>
+          <div
+            class="reel r"
+            tabindex="0"
+            aria-label="Album ảnh, vuốt ngang để xem thêm"
+          >
+            <figure class="ph">
+              <img
+                src="assets/album/2.jpg"
+                alt="Anh Thư ôm bó hoa hồng"
+                loading="lazy"
+              />
+              <figcaption>01 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/3.jpg"
+                alt="Anh Thư cầm bằng tốt nghiệp trước bảng tên trường"
+                loading="lazy"
+              />
+              <figcaption>02 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/5.jpg"
+                alt="Anh Thư tung khăn choàng trước toà nhà trường"
+                loading="lazy"
+              />
+              <figcaption>03 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/4.jpg"
+                alt="Anh Thư trong váy trắng ở sảnh trường"
+                loading="lazy"
+              />
+              <figcaption>04 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/6.jpg"
+                alt="Anh Thư cười, tóc bay trong gió"
+                loading="lazy"
+              />
+              <figcaption>05 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/1.jpg"
+                alt="Anh Thư ngoái nhìn, ôm bằng tốt nghiệp"
+                loading="lazy"
+              />
+              <figcaption>06 / 07</figcaption>
+            </figure>
+            <figure class="ph">
+              <img
+                src="assets/album/7.jpg"
+                alt="Anh Thư ngước nhìn giếng trời của trường"
+                loading="lazy"
+              />
+              <figcaption>07 / 07</figcaption>
+            </figure>
+          </div>
+          <p class="label r">Vuốt ngang để xem thêm →</p>
+        </div>
+      </section>
 
-  <!-- 8. guestbook wall -->
-  <section class="page so grow" data-name="Sổ lưu bút">
-    <div class="pg">
-      <h2 class="cond h-cond">Sổ lưu bút</h2>
-      <div class="wall-list" id="wallList"></div>
-      <p class="empty" id="wallEmpty">Chưa có lời chúc nào. <a href="#gui">Viết lời chúc đầu tiên</a></p>
-      <footer>
-        <p class="script">Hẹn gặp <span class="to-name">bạn</span> nha</p>
-        <p class="label">Anh Thư · 04.12.2026 · 13:00</p>
-      </footer>
-    </div>
-  </section>
-</main>
+      <!-- 5. thank-you -->
+      <section class="page thanks" data-name="Lời cảm ơn">
+        <div class="pg" style="--mo: url(assets/mo-1.jpg)">
+          <figure class="pop arch">
+            <img class="bg" src="assets/moi-nen.jpg" alt="" loading="lazy" />
+            <i class="line" aria-hidden="true"></i>
+            <img
+              class="ppl"
+              src="assets/moi-nguoi.webp"
+              alt="Anh Thư trong váy trắng và khăn choàng tốt nghiệp"
+              loading="lazy"
+            />
+          </figure>
+          <h2 class="cond h-cond r">Lời cảm ơn</h2>
+          <p class="body r">
+            Những năm tháng ở Phạm Ngọc Thạch là những ca trực xuyên đêm, những
+            mùa thi tưởng chừng không qua nổi, và cả những lần Thư muốn buông
+            tay.
+          </p>
+          <p class="body r">
+            Thư đi được tới hôm nay là nhờ gia đình luôn ở phía sau, thầy cô
+            kiên nhẫn chỉ dạy từng chút, và bạn bè cùng Thư gồng qua từng kỳ
+            thi. Cảm ơn mọi người đã thương Thư, tin Thư và ở bên Thư suốt chặng
+            đường này.
+          </p>
+          <p class="script sign r">Anh Thư</p>
+        </div>
+      </section>
 
-<canvas id="fx" aria-hidden="true"></canvas>
+      <!-- 6. will you come? -->
+      <section class="page hoi" data-name="Hồi âm">
+        <div class="pg" style="--mo: url(assets/mo-5.jpg)">
+          <figure class="pop round">
+            <img class="bg" src="assets/hoi-nen.jpg" alt="" loading="lazy" />
+            <i class="line" aria-hidden="true"></i>
+            <img
+              class="ppl"
+              src="assets/hoi-nguoi.webp"
+              alt="Anh Thư một tay giữ mũ, tay cầm bằng tốt nghiệp"
+              loading="lazy"
+            />
+          </figure>
+          <p class="script h-script r">
+            <span class="to-name">Bạn</span> sẽ đến chứ?
+          </p>
+          <p class="when r" id="rsvpWhen"></p>
+          <div class="actions r">
+            <button class="btn" data-pick="yes">Chắc chắn rồi!</button>
+            <button class="btn ghost" data-pick="no">Tiếc quá, mình bận</button>
+          </div>
+        </div>
+      </section>
 
-<script>
-// ---- Chỉnh thông tin ở đây ----
-const CFG = {
-  date: '2026-12-04',
-  time: '13:00', // giờ làm lễ (24h)
-  address: '567 Nguyễn Cửu Phú, Tân Nhựt, Hồ Chí Minh',
-  title: 'Lễ tốt nghiệp của Anh Thư',
-  place: 'Trường Đại học Y khoa Phạm Ngọc Thạch (cơ sở 2), 567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh',
-  sheetUrl: '',  // link Web App của Apps Script (xem apps-script/Code.gs). Để trống thì form báo "chưa mở sổ lưu bút"
-};
+      <!-- 7. RSVP + guestbook form -->
+      <section class="page gui" id="gui" data-name="Lưu bút">
+        <div class="pg" style="--mo: url(assets/mo-3.jpg)">
+          <h2 class="cond h-cond r">Lưu bút cho Thư</h2>
+          <form class="gb r" id="gb" novalidate>
+            <label class="f"
+              >Tên của bạn<input
+                name="name"
+                maxlength="60"
+                autocomplete="name"
+                required
+            /></label>
+            <fieldset class="choice">
+              <legend>Bạn sẽ đến chứ?</legend>
+              <label
+                ><input type="radio" name="attend" value="yes" required /><span
+                  >Chắc chắn rồi!</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="attend" value="no" /><span
+                  >Tiếc quá, mình bận</span
+                ></label
+              >
+            </fieldset>
+            <label class="f" id="guestsField" hidden
+              >Bạn đi mấy người (tính cả bạn)?
+              <select name="guests">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select></label
+            >
+            <label class="f"
+              >Lời chúc<textarea
+                name="message"
+                maxlength="1000"
+                placeholder="Viết vài dòng chúc mừng Thư nha…"
+              ></textarea>
+            </label>
+            <label class="f"
+              >Kèm một tấm ảnh (không bắt buộc)
+              <span class="photo-row"
+                ><input type="file" name="photo" accept="image/*" /><img
+                  id="preview"
+                  alt="Ảnh bạn chọn"
+                  hidden /></span
+            ></label>
+            <input
+              class="hp"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <button class="btn" type="submit" id="gbBtn">Gửi cho Thư</button>
+            <p class="rsvp-msg" id="rsvpMsg" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
 
-const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const target = new Date(`${CFG.date}T${CFG.time}:00+07:00`);
+      <!-- 8. guestbook wall -->
+      <section class="page so grow" data-name="Sổ lưu bút">
+        <div class="pg">
+          <h2 class="cond h-cond">Sổ lưu bút</h2>
+          <div class="wall-list" id="wallList"></div>
+          <p class="empty" id="wallEmpty">
+            Chưa có lời chúc nào. <a href="#gui">Viết lời chúc đầu tiên</a>
+          </p>
+          <footer>
+            <p class="script">Hẹn gặp <span class="to-name">bạn</span> nha</p>
+            <p class="label">Anh Thư · 04.12.2026 · 13:00</p>
+          </footer>
+        </div>
+      </section>
+    </main>
 
-// ---- personalise: ?to=Minh ----
-const guest = (new URLSearchParams(location.search).get('to') || '').trim().slice(0, 40);
-if (guest) $$('.to-name, .to-guest').forEach(el => el.textContent = guest);
+    <canvas id="fx" aria-hidden="true"></canvas>
 
-// ---- static text from CFG ----
-const weekday = new Intl.DateTimeFormat('vi-VN', { weekday: 'long', timeZone: 'Asia/Ho_Chi_Minh' }).format(target).replace(/^./, c => c.toUpperCase());
-const [yy, mm, dd] = CFG.date.split('-');
-$('#cDay').textContent = dd;
-$('#cMonthYear').textContent = `Tháng ${mm} · ${yy}`;
-$('#cTime').textContent = `${CFG.time} · ${weekday}`;
-$('#rsvpWhen').textContent = `${CFG.time} · ${weekday} ${dd}.${mm}.${yy} · ĐH Y khoa Phạm Ngọc Thạch, cơ sở 2`;
-$('#dirLink').href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CFG.address)}`;
+    <script>
+      // ---- Chỉnh thông tin ở đây ----
+      const CFG = {
+        date: "2026-12-04",
+        time: "13:00", // giờ làm lễ (24h)
+        address: "567 Nguyễn Cửu Phú, Tân Nhựt, Hồ Chí Minh",
+        title: "Lễ tốt nghiệp của Anh Thư",
+        place:
+          "Trường Đại học Y khoa Phạm Ngọc Thạch (cơ sở 2), 567 Nguyễn Cửu Phú, Tân Nhựt, TP. Hồ Chí Minh",
+        sheetUrl: "", // link Web App của Apps Script (xem apps-script/Code.gs). Để trống thì form báo "chưa mở sổ lưu bút"
+      };
 
-// ---- music ----
-const MAX_VOL = .3; // nhạc nền chỉ ở mức 30%
-const music = $('#music'), soundBtn = $('#soundBtn');
-const syncMusic = () => soundBtn.setAttribute('aria-pressed', !music.paused);
-music.onplay = music.onpause = syncMusic; // also catches the OS pausing it (calls, lock screen)
-function fadeVolume(sec) {
-  const t0 = performance.now();
-  (function step(now) {
-    music.volume = MAX_VOL * Math.min(1, (now - t0) / (sec * 1000)) ** 2;
-    if (music.volume < MAX_VOL && !music.paused) requestAnimationFrame(step);
-  })(t0);
-}
-let gain = null;
-// Fade in from silence. iOS ignores audio.volume, so fade through Web Audio; but a file:// page
-// can't route media into Web Audio (treated as cross-origin → silence), so there use audio.volume.
-function playFading(sec = 4) {
-  music.play().catch(() => {}); // must be called inside a tap, or mobile browsers block it
-  const AC = window.AudioContext || window.webkitAudioContext;
-  if (!gain && AC && location.protocol !== 'file:') {
-    const ctx = new AC(); gain = ctx.createGain();
-    ctx.createMediaElementSource(music).connect(gain).connect(ctx.destination);
-  }
-  if (gain) {
-    music.volume = 1; // the gain node does the fading now
-    const ctx = gain.context, t = ctx.currentTime; ctx.resume();
-    gain.gain.cancelScheduledValues(t); gain.gain.setValueAtTime(.001, t); gain.gain.exponentialRampToValueAtTime(MAX_VOL, t + sec);
-  } else fadeVolume(sec);
-}
-soundBtn.onclick = () => music.paused ? playFading(1.5) : music.pause();
-// Try to start on page load. Browsers (always on iPhone) block sound before the first tap;
-// if blocked, it starts on the tap that opens the envelope instead.
-music.volume = 0;
-music.play().then(() => fadeVolume(4), () => {});
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => document.querySelectorAll(s);
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const target = new Date(`${CFG.date}T${CFG.time}:00+07:00`);
 
-// ---- intro: drag across the envelope to tear it, then the letter rises and unfolds ----
-const intro = $('#intro'), env = $('#env');
-const zig = (bottom, n = 24, d = 5) => {
-  const pts = Array.from({ length: n + 1 }, (_, i) => `${(i / n * 100).toFixed(2)}% ${bottom ? `calc(100% - ${i % 2 ? d : 0}px)` : `${i % 2 ? d : 0}px`}`);
-  return bottom ? `polygon(0 0,100% 0,${pts.reverse().join(',')})` : `polygon(${pts.join(',')},100% 100%,0 100%)`;
-};
-env.style.setProperty('--zig-top', zig(false));
-env.style.setProperty('--zig-bot', zig(true));
+      // ---- personalise: ?to=Minh ----
+      const guest = (new URLSearchParams(location.search).get("to") || "")
+        .trim()
+        .slice(0, 40);
+      if (guest)
+        $$(".to-name, .to-guest").forEach((el) => (el.textContent = guest));
 
-let t = 0, lastX = null, done = false, auto = 0, buzz = 0;
-function setT(v) {
-  t = Math.min(1, v);
-  env.style.setProperty('--t', (t * 100).toFixed(2) + '%');
-  env.style.setProperty('--k', t.toFixed(3));
-  if (t - buzz > .08) { buzz = t; navigator.vibrate?.(6); } // little paper-rip ticks on Android
-  if (t >= 1) finish();
-}
-function startMusic() { if (music.paused) playFading(); } // must run inside a tap/keypress; skipped if autoplay already worked
-function autoTear() {
-  if (done || auto) return;
-  const t0 = t, start = performance.now(), dur = reduce ? 0 : 650 * (1 - t0) + 150;
-  auto = requestAnimationFrame(function step(now) {
-    const k = dur ? Math.min(1, (now - start) / dur) : 1;
-    setT(t0 + (1 - t0) * (1 - (1 - k) ** 3));
-    if (k < 1) requestAnimationFrame(step);
-  });
-}
-env.addEventListener('pointerdown', e => {
-  if (done) return;
-  lastX = e.clientX; env.setPointerCapture(e.pointerId); intro.classList.add('tearing');
-});
-env.addEventListener('pointermove', e => {
-  if (lastX === null || done || auto) return;
-  setT(t + Math.max(0, e.clientX - lastX) / env.offsetWidth); // only rightward motion tears
-  lastX = e.clientX;
-});
-env.addEventListener('pointerup', () => { lastX = null; startMusic(); autoTear(); }); // a plain tap tears it too
-env.addEventListener('pointercancel', () => { lastX = null; });
-env.addEventListener('keydown', e => {
-  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startMusic(); autoTear(); }
-});
+      // ---- static text from CFG ----
+      const weekday = new Intl.DateTimeFormat("vi-VN", {
+        weekday: "long",
+        timeZone: "Asia/Ho_Chi_Minh",
+      })
+        .format(target)
+        .replace(/^./, (c) => c.toUpperCase());
+      const [yy, mm, dd] = CFG.date.split("-");
+      $("#cDay").textContent = dd;
+      $("#cMonthYear").textContent = `Tháng ${mm} · ${yy}`;
+      $("#cTime").textContent = `${CFG.time} · ${weekday}`;
+      $("#rsvpWhen").textContent =
+        `${CFG.time} · ${weekday} ${dd}.${mm}.${yy} · ĐH Y khoa Phạm Ngọc Thạch, cơ sở 2`;
+      $("#dirLink").href =
+        `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CFG.address)}`;
 
-function finish() {
-  if (done) return;
-  done = true;
-  env.removeAttribute('tabindex');
-  const steps = reduce ? [['torn', 0], ['done', 0]]
-    : [['torn', 0], ['rise', 400], ['leave', 1250], ['unfold', 2150], ['done', 4300]];
-  for (const [cls, ms] of steps) setTimeout(() => intro.classList.add(cls), ms);
-  setTimeout(() => {
-    document.body.classList.remove('locked');
-    document.body.classList.add('opened');
-    soundBtn.hidden = $('#dots').hidden = false;
-    if (!reduce) $('#blipRun').beginElement(); // the red blip runs along the trace while it draws
-    startReveals();
-  }, reduce ? 0 : 4400);
-  setTimeout(() => intro.remove(), reduce ? 50 : 5400);
-}
-
-// ---- reveal on scroll ----
-function startReveals() {
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { rootMargin: '0px 0px -10% 0px', threshold: .15 });
-  $$('.r, .pop').forEach(el => io.observe(el));
-  requestAnimationFrame(frame);
-  loadWall();
-}
-
-// ---- page dots ----
-const pages = [...$$('.page')], dots = $('#dots');
-pages.forEach((pg, i) => {
-  const b = document.createElement('button');
-  b.setAttribute('aria-label', pg.dataset.name);
-  b.onclick = () => pg.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-  dots.append(b);
-});
-
-// ---- 3D page fold + framed cut-outs moving against their photo ----
-const pops = [...$$('.pop')], inners = pages.map(p => p.querySelector('.pg'));
-let lastY = -1, current = -1;
-function frame() {
-  if (scrollY !== lastY) {
-    lastY = scrollY;
-    const vh = innerHeight;
-    pages.forEach((pg, i) => {
-      const r = pg.getBoundingClientRect();
-      // a page taller than the screen only folds on its way in, then scrolls flat
-      let p = r.top / vh;
-      if (p < 0 && r.height > vh * 1.05) p = Math.min(0, r.bottom / vh - 1);
-      p = Math.max(-1, Math.min(1, p));
-      if (reduce) p = 0;
-      inners[i].style.setProperty('--p', p.toFixed(4));
-      inners[i].style.setProperty('--a', Math.abs(p).toFixed(4));
-      if (Math.abs(r.top) < vh / 2 && current !== i) {
-        current = i;
-        [...dots.children].forEach((d, j) => d.setAttribute('aria-current', j === i));
+      // ---- music ----
+      const MAX_VOL = 0.3; // nhạc nền chỉ ở mức 30%
+      const music = $("#music"),
+        soundBtn = $("#soundBtn");
+      const syncMusic = () =>
+        soundBtn.setAttribute("aria-pressed", !music.paused);
+      music.onplay = music.onpause = syncMusic; // also catches the OS pausing it (calls, lock screen)
+      function fadeVolume(sec) {
+        const t0 = performance.now();
+        (function step(now) {
+          music.volume = MAX_VOL * Math.min(1, (now - t0) / (sec * 1000)) ** 2;
+          if (music.volume < MAX_VOL && !music.paused)
+            requestAnimationFrame(step);
+        })(t0);
       }
-    });
-    if (!reduce) for (const p of pops) {
-      const r = p.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > vh) continue;
-      p.style.setProperty('--py', (1 - 2 * (r.top + r.height / 2) / vh).toFixed(3));
-    }
-  }
-  requestAnimationFrame(frame);
-}
-
-// ---- countdown ----
-const pad = (n, k) => String(n).padStart(k, '0');
-const cdEls = { d: $('#cd-d'), h: $('#cd-h'), m: $('#cd-m'), s: $('#cd-s') };
-function tick() {
-  const s = Math.max(0, Math.floor((target - Date.now()) / 1000));
-  const p = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
-  for (const key in cdEls) {
-    const el = cdEls[key], v = pad(p[key], key === 'd' ? 1 : 2);
-    if (el.textContent !== v) { el.textContent = v; el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
-  }
-}
-tick(); setInterval(tick, 1000);
-
-// ---- add to calendar (.ics) ----
-const icsEsc = s => s.replace(/([,;\\])/g, '\\$1');
-const icsDate = d => d.toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
-function downloadIcs() {
-  const txt = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//thiep-tot-nghiep//VI', 'BEGIN:VEVENT',
-    `UID:tot-nghiep-anh-thu-${CFG.date}@thiep`, `DTSTAMP:${icsDate(new Date())}`,
-    `DTSTART:${icsDate(target)}`, `DTEND:${icsDate(new Date(+target + 3 * 36e5))}`,
-    `SUMMARY:${icsEsc('🎓 ' + CFG.title)}`, `LOCATION:${icsEsc(CFG.place)}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([txt], { type: 'text/calendar' }));
-  a.download = 'le-tot-nghiep-anh-thu.ics';
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-}
-$$('[data-ics]').forEach(b => b.onclick = downloadIcs);
-
-// ---- RSVP + guestbook → Google Sheet (see apps-script/Code.gs) ----
-const form = $('#gb'), msg = $('#rsvpMsg'), gbBtn = $('#gbBtn'), preview = $('#preview');
-if (guest) form.elements.name.value = guest;
-function setAttend(v) { $('#guestsField').hidden = v !== 'yes'; }
-// the two big buttons on the previous page pre-pick the answer and move on to the form
-$$('[data-pick]').forEach(b => b.onclick = () => {
-  const radio = form.querySelector(`input[name=attend][value=${b.dataset.pick}]`);
-  radio.checked = true; setAttend(radio.value);
-  $('#gui').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-});
-form.addEventListener('change', e => {
-  if (e.target.name === 'attend') setAttend(e.target.value);
-  if (e.target.name === 'photo') {
-    const f = e.target.files[0];
-    if (preview.src) URL.revokeObjectURL(preview.src);
-    preview.hidden = !f;
-    if (f) preview.src = URL.createObjectURL(f);
-  }
-});
-// Phone photos are 3-10MB; shrink to a ~200KB JPEG before sending.
-async function shrink(file, max = 1280) {
-  const bmp = await createImageBitmap(file);
-  const k = Math.min(1, max / Math.max(bmp.width, bmp.height));
-  const c = document.createElement('canvas');
-  c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k);
-  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
-  return c.toDataURL('image/jpeg', .82);
-}
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const f = form.elements, name = f.name.value.trim(), attend = f.attend.value;
-  if (f.website.value) return; // honeypot: only bots fill the hidden field
-  if (!name) { msg.textContent = 'Bạn điền tên giúp Thư nha'; return f.name.focus(); }
-  if (!attend) { msg.textContent = 'Bạn chọn có đến hay không giúp Thư nha'; return; }
-  gbBtn.disabled = true; gbBtn.textContent = 'Đang gửi…'; msg.textContent = '';
-  try {
-    let photo = '';
-    if (f.photo.files[0]) {
-      try { photo = await shrink(f.photo.files[0]); }
-      catch { throw new Error('Ảnh này Thư không mở được, bạn chọn ảnh khác nha'); }
-    }
-    if (!CFG.sheetUrl) throw new Error('Thư chưa mở sổ lưu bút, bạn quay lại sau nha');
-    // text/plain body (fetch's default for a string) keeps this a "simple" request: no CORS preflight, which Apps Script can't answer
-    const res = await fetch(CFG.sheetUrl, { method: 'POST', body: JSON.stringify({
-      name, attend, guests: attend === 'yes' ? +f.guests.value : 0, message: f.message.value.trim(), photo }) });
-    const out = await res.json();
-    if (!out.ok) throw new Error(out.error || 'Gửi chưa được');
-    msg.textContent = attend === 'yes' ? `Thư hẹn gặp ${name} lúc ${CFG.time} ngày ${dd}/${mm} nha` : 'Thư nhận được lời chúc rồi, cảm ơn bạn nha';
-    gbBtn.textContent = 'Đã gửi';
-    if (attend === 'yes') { const r = gbBtn.getBoundingClientRect(); burst(r.left + r.width / 2, r.top); }
-    try { localStorage.setItem('rsvp', attend); } catch {}
-    loadWall();
-  } catch (err) {
-    msg.textContent = err instanceof TypeError ? 'Mạng đang chập chờn, bạn thử gửi lại giúp Thư nha' : err.message;
-    gbBtn.disabled = false; gbBtn.textContent = 'Gửi cho Thư';
-  }
-});
-try { if (localStorage.getItem('rsvp')) msg.textContent = 'Bạn đã gửi hồi âm rồi, gửi thêm lời chúc cũng được nha'; } catch {}
-
-async function loadWall() {
-  if (!CFG.sheetUrl) return;
-  try {
-    const { list = [] } = await (await fetch(CFG.sheetUrl)).json();
-    $('#wallList').replaceChildren(...list.map(w => {
-      const card = document.createElement('article'); card.className = 'wish';
-      const h = document.createElement('h4'); h.textContent = w.name;
-      const p = document.createElement('p'); p.textContent = w.message;
-      card.append(h, p);
-      if (/^[\w-]{10,}$/.test(w.photo || '')) { // a Drive file id; anything else is ignored
-        const img = document.createElement('img');
-        img.src = `https://drive.google.com/thumbnail?id=${w.photo}&sz=w800`; img.loading = 'lazy'; img.alt = `Ảnh ${w.name} gửi Thư`;
-        card.append(img);
+      let gain = null;
+      // Fade in from silence. iOS ignores audio.volume, so fade through Web Audio; but a file:// page
+      // can't route media into Web Audio (treated as cross-origin → silence), so there use audio.volume.
+      function playFading(sec = 4) {
+        music.play().catch(() => {}); // must be called inside a tap, or mobile browsers block it
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!gain && AC && location.protocol !== "file:") {
+          const ctx = new AC();
+          gain = ctx.createGain();
+          ctx
+            .createMediaElementSource(music)
+            .connect(gain)
+            .connect(ctx.destination);
+        }
+        if (gain) {
+          music.volume = 1; // the gain node does the fading now
+          const ctx = gain.context,
+            t = ctx.currentTime;
+          ctx.resume();
+          gain.gain.cancelScheduledValues(t);
+          gain.gain.setValueAtTime(0.001, t);
+          gain.gain.exponentialRampToValueAtTime(MAX_VOL, t + sec);
+        } else fadeVolume(sec);
       }
-      return card;
-    }));
-    $('#wallEmpty').hidden = list.length > 0;
-  } catch {} // the wall is a nice-to-have; the form still works without it
-}
+      soundBtn.onclick = () => (music.paused ? playFading(1.5) : music.pause());
+      // Try to start on page load. Browsers (always on iPhone) block sound before the first tap;
+      // if blocked, it starts on the tap that opens the envelope instead.
+      music.volume = 0;
+      music.play().then(
+        () => fadeVolume(4),
+        () => {},
+      );
 
-// ---- confetti ----
-const cv = $('#fx'), cx = cv.getContext('2d');
-let bits = [], fxRaf = 0;
-function burst(x, y) {
-  if (reduce) return;
-  const dpr = devicePixelRatio || 1;
-  cv.width = innerWidth * dpr; cv.height = innerHeight * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  const cols = ['#004225', '#0B5A35', '#C21F3A', '#DCE6D5', '#FFF8E7', '#FFFFFF'];
-  for (let i = 0; i < 150; i++) {
-    const a = -Math.PI / 2 + (Math.random() - .5) * 1.9, v = 7 + Math.random() * 10;
-    bits.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, r: Math.random() * 6.3, vr: (Math.random() - .5) * .3,
-      s: 6 + Math.random() * 6, c: cols[i % cols.length], cap: i % 15 === 0, life: 0 });
-  }
-  if (!fxRaf) fxRaf = requestAnimationFrame(fxTick);
-}
-function fxTick() {
-  cx.clearRect(0, 0, innerWidth, innerHeight);
-  bits = bits.filter(p => p.y < innerHeight + 40 && p.life < 420);
-  for (const p of bits) {
-    p.life++; p.vy += .28; p.vx *= .985; p.vy *= .985; p.x += p.vx; p.y += p.vy; p.r += p.vr;
-    cx.save(); cx.translate(p.x, p.y); cx.rotate(p.r);
-    if (p.cap) { cx.font = '22px serif'; cx.fillText('🎓', -11, 8); }
-    else { cx.scale(1, Math.cos(p.life * .18 + p.r)); cx.fillStyle = p.c; cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); }
-    cx.restore();
-  }
-  fxRaf = bits.length ? requestAnimationFrame(fxTick) : 0;
-}
-</script>
-</body>
+      // ---- intro: drag across the envelope to tear it, then the letter rises and unfolds ----
+      const intro = $("#intro"),
+        env = $("#env");
+      const zig = (bottom, n = 24, d = 5) => {
+        const pts = Array.from(
+          { length: n + 1 },
+          (_, i) =>
+            `${((i / n) * 100).toFixed(2)}% ${bottom ? `calc(100% - ${i % 2 ? d : 0}px)` : `${i % 2 ? d : 0}px`}`,
+        );
+        return bottom
+          ? `polygon(0 0,100% 0,${pts.reverse().join(",")})`
+          : `polygon(${pts.join(",")},100% 100%,0 100%)`;
+      };
+      env.style.setProperty("--zig-top", zig(false));
+      env.style.setProperty("--zig-bot", zig(true));
+
+      let t = 0,
+        lastX = null,
+        done = false,
+        auto = 0,
+        buzz = 0;
+      function setT(v) {
+        t = Math.min(1, v);
+        env.style.setProperty("--t", (t * 100).toFixed(2) + "%");
+        env.style.setProperty("--k", t.toFixed(3));
+        if (t - buzz > 0.08) {
+          buzz = t;
+          navigator.vibrate?.(6);
+        } // little paper-rip ticks on Android
+        if (t >= 1) finish();
+      }
+      function startMusic() {
+        if (music.paused) playFading();
+      } // must run inside a tap/keypress; skipped if autoplay already worked
+      function autoTear() {
+        if (done || auto) return;
+        const t0 = t,
+          start = performance.now(),
+          dur = reduce ? 0 : 650 * (1 - t0) + 150;
+        auto = requestAnimationFrame(function step(now) {
+          const k = dur ? Math.min(1, (now - start) / dur) : 1;
+          setT(t0 + (1 - t0) * (1 - (1 - k) ** 3));
+          if (k < 1) requestAnimationFrame(step);
+        });
+      }
+      env.addEventListener("pointerdown", (e) => {
+        if (done) return;
+        lastX = e.clientX;
+        env.setPointerCapture(e.pointerId);
+        intro.classList.add("tearing");
+      });
+      env.addEventListener("pointermove", (e) => {
+        if (lastX === null || done || auto) return;
+        setT(t + Math.max(0, e.clientX - lastX) / env.offsetWidth); // only rightward motion tears
+        lastX = e.clientX;
+      });
+      env.addEventListener("pointerup", () => {
+        lastX = null;
+        startMusic();
+        autoTear();
+      }); // a plain tap tears it too
+      env.addEventListener("pointercancel", () => {
+        lastX = null;
+      });
+      env.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          startMusic();
+          autoTear();
+        }
+      });
+
+      function finish() {
+        if (done) return;
+        done = true;
+        env.removeAttribute("tabindex");
+        const steps = reduce
+          ? [
+              ["torn", 0],
+              ["done", 0],
+            ]
+          : [
+              ["torn", 0],
+              ["rise", 400],
+              ["leave", 1250],
+              ["unfold", 2150],
+              ["done", 4300],
+            ];
+        for (const [cls, ms] of steps)
+          setTimeout(() => intro.classList.add(cls), ms);
+        setTimeout(
+          () => {
+            document.body.classList.remove("locked");
+            document.body.classList.add("opened");
+            soundBtn.hidden = $("#dots").hidden = false;
+            if (!reduce) $("#blipRun").beginElement(); // the red blip runs along the trace while it draws
+            startReveals();
+          },
+          reduce ? 0 : 4400,
+        );
+        setTimeout(() => intro.remove(), reduce ? 50 : 5400);
+      }
+
+      // ---- reveal on scroll ----
+      function startReveals() {
+        const io = new IntersectionObserver(
+          (es) =>
+            es.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            }),
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.15 },
+        );
+        $$(".r, .pop").forEach((el) => io.observe(el));
+        requestAnimationFrame(frame);
+        loadWall();
+      }
+
+      // ---- page dots ----
+      const pages = [...$$(".page")],
+        dots = $("#dots");
+      pages.forEach((pg, i) => {
+        const b = document.createElement("button");
+        b.setAttribute("aria-label", pg.dataset.name);
+        b.onclick = () =>
+          pg.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+        dots.append(b);
+      });
+
+      // ---- 3D page fold + framed cut-outs moving against their photo ----
+      const pops = [...$$(".pop")],
+        inners = pages.map((p) => p.querySelector(".pg"));
+      let lastY = -1,
+        current = -1;
+      function frame() {
+        if (scrollY !== lastY) {
+          lastY = scrollY;
+          const vh = innerHeight;
+          pages.forEach((pg, i) => {
+            const r = pg.getBoundingClientRect();
+            // a page taller than the screen only folds on its way in, then scrolls flat
+            let p = r.top / vh;
+            if (p < 0 && r.height > vh * 1.05)
+              p = Math.min(0, r.bottom / vh - 1);
+            p = Math.max(-1, Math.min(1, p));
+            if (reduce) p = 0;
+            inners[i].style.setProperty("--p", p.toFixed(4));
+            inners[i].style.setProperty("--a", Math.abs(p).toFixed(4));
+            if (Math.abs(r.top) < vh / 2 && current !== i) {
+              current = i;
+              [...dots.children].forEach((d, j) =>
+                d.setAttribute("aria-current", j === i),
+              );
+            }
+          });
+          if (!reduce)
+            for (const p of pops) {
+              const r = p.getBoundingClientRect();
+              if (r.bottom < 0 || r.top > vh) continue;
+              p.style.setProperty(
+                "--py",
+                (1 - (2 * (r.top + r.height / 2)) / vh).toFixed(3),
+              );
+            }
+        }
+        requestAnimationFrame(frame);
+      }
+
+      // ---- countdown ----
+      const pad = (n, k) => String(n).padStart(k, "0");
+      const cdEls = {
+        d: $("#cd-d"),
+        h: $("#cd-h"),
+        m: $("#cd-m"),
+        s: $("#cd-s"),
+      };
+      function tick() {
+        const s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+        const p = {
+          d: Math.floor(s / 86400),
+          h: Math.floor((s % 86400) / 3600),
+          m: Math.floor((s % 3600) / 60),
+          s: s % 60,
+        };
+        for (const key in cdEls) {
+          const el = cdEls[key],
+            v = pad(p[key], key === "d" ? 1 : 2);
+          if (el.textContent !== v) {
+            el.textContent = v;
+            el.classList.remove("bump");
+            void el.offsetWidth;
+            el.classList.add("bump");
+          }
+        }
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      // ---- add to calendar (.ics) ----
+      const icsEsc = (s) => s.replace(/([,;\\])/g, "\\$1");
+      const icsDate = (d) =>
+        d.toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
+      function downloadIcs() {
+        const txt = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//thiep-tot-nghiep//VI",
+          "BEGIN:VEVENT",
+          `UID:tot-nghiep-anh-thu-${CFG.date}@thiep`,
+          `DTSTAMP:${icsDate(new Date())}`,
+          `DTSTART:${icsDate(target)}`,
+          `DTEND:${icsDate(new Date(+target + 3 * 36e5))}`,
+          `SUMMARY:${icsEsc("🎓 " + CFG.title)}`,
+          `LOCATION:${icsEsc(CFG.place)}`,
+          "END:VEVENT",
+          "END:VCALENDAR",
+        ].join("\r\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(
+          new Blob([txt], { type: "text/calendar" }),
+        );
+        a.download = "le-tot-nghiep-anh-thu.ics";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      }
+      $$("[data-ics]").forEach((b) => (b.onclick = downloadIcs));
+
+      // ---- RSVP + guestbook → Google Sheet (see apps-script/Code.gs) ----
+      const form = $("#gb"),
+        msg = $("#rsvpMsg"),
+        gbBtn = $("#gbBtn"),
+        preview = $("#preview");
+      if (guest) form.elements.name.value = guest;
+      function setAttend(v) {
+        $("#guestsField").hidden = v !== "yes";
+      }
+      // the two big buttons on the previous page pre-pick the answer and move on to the form
+      $$("[data-pick]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            const radio = form.querySelector(
+              `input[name=attend][value=${b.dataset.pick}]`,
+            );
+            radio.checked = true;
+            setAttend(radio.value);
+            $("#gui").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+          }),
+      );
+      form.addEventListener("change", (e) => {
+        if (e.target.name === "attend") setAttend(e.target.value);
+        if (e.target.name === "photo") {
+          const f = e.target.files[0];
+          if (preview.src) URL.revokeObjectURL(preview.src);
+          preview.hidden = !f;
+          if (f) preview.src = URL.createObjectURL(f);
+        }
+      });
+      // Phone photos are 3-10MB; shrink to a ~200KB JPEG before sending.
+      async function shrink(file, max = 1280) {
+        const bmp = await createImageBitmap(file);
+        const k = Math.min(1, max / Math.max(bmp.width, bmp.height));
+        const c = document.createElement("canvas");
+        c.width = Math.round(bmp.width * k);
+        c.height = Math.round(bmp.height * k);
+        c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
+        return c.toDataURL("image/jpeg", 0.82);
+      }
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const f = form.elements,
+          name = f.name.value.trim(),
+          attend = f.attend.value;
+        if (f.website.value) return; // honeypot: only bots fill the hidden field
+        if (!name) {
+          msg.textContent = "Bạn điền tên giúp Thư nha";
+          return f.name.focus();
+        }
+        if (!attend) {
+          msg.textContent = "Bạn chọn có đến hay không giúp Thư nha";
+          return;
+        }
+        gbBtn.disabled = true;
+        gbBtn.textContent = "Đang gửi…";
+        msg.textContent = "";
+        try {
+          let photo = "";
+          if (f.photo.files[0]) {
+            try {
+              photo = await shrink(f.photo.files[0]);
+            } catch {
+              throw new Error(
+                "Ảnh này Thư không mở được, bạn chọn ảnh khác nha",
+              );
+            }
+          }
+          if (!CFG.sheetUrl)
+            throw new Error("Thư chưa mở sổ lưu bút, bạn quay lại sau nha");
+          // text/plain body (fetch's default for a string) keeps this a "simple" request: no CORS preflight, which Apps Script can't answer
+          const res = await fetch(CFG.sheetUrl, {
+            method: "POST",
+            body: JSON.stringify({
+              name,
+              attend,
+              guests: attend === "yes" ? +f.guests.value : 0,
+              message: f.message.value.trim(),
+              photo,
+            }),
+          });
+          const out = await res.json();
+          if (!out.ok) throw new Error(out.error || "Gửi chưa được");
+          msg.textContent =
+            attend === "yes"
+              ? `Thư hẹn gặp ${name} lúc ${CFG.time} ngày ${dd}/${mm} nha`
+              : "Thư nhận được lời chúc rồi, cảm ơn bạn nha";
+          gbBtn.textContent = "Đã gửi";
+          if (attend === "yes") {
+            const r = gbBtn.getBoundingClientRect();
+            burst(r.left + r.width / 2, r.top);
+          }
+          try {
+            localStorage.setItem("rsvp", attend);
+          } catch {}
+          loadWall();
+        } catch (err) {
+          msg.textContent =
+            err instanceof TypeError
+              ? "Mạng đang chập chờn, bạn thử gửi lại giúp Thư nha"
+              : err.message;
+          gbBtn.disabled = false;
+          gbBtn.textContent = "Gửi cho Thư";
+        }
+      });
+      try {
+        if (localStorage.getItem("rsvp"))
+          msg.textContent =
+            "Bạn đã gửi hồi âm rồi, gửi thêm lời chúc cũng được nha";
+      } catch {}
+
+      async function loadWall() {
+        if (!CFG.sheetUrl) return;
+        try {
+          const { list = [] } = await (await fetch(CFG.sheetUrl)).json();
+          $("#wallList").replaceChildren(
+            ...list.map((w) => {
+              const card = document.createElement("article");
+              card.className = "wish";
+              const h = document.createElement("h4");
+              h.textContent = w.name;
+              const p = document.createElement("p");
+              p.textContent = w.message;
+              card.append(h, p);
+              if (/^[\w-]{10,}$/.test(w.photo || "")) {
+                // a Drive file id; anything else is ignored
+                const img = document.createElement("img");
+                img.src = `https://drive.google.com/thumbnail?id=${w.photo}&sz=w800`;
+                img.loading = "lazy";
+                img.alt = `Ảnh ${w.name} gửi Thư`;
+                card.append(img);
+              }
+              return card;
+            }),
+          );
+          $("#wallEmpty").hidden = list.length > 0;
+        } catch {} // the wall is a nice-to-have; the form still works without it
+      }
+
+      // ---- confetti ----
+      const cv = $("#fx"),
+        cx = cv.getContext("2d");
+      let bits = [],
+        fxRaf = 0;
+      function burst(x, y) {
+        if (reduce) return;
+        const dpr = devicePixelRatio || 1;
+        cv.width = innerWidth * dpr;
+        cv.height = innerHeight * dpr;
+        cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const cols = [
+          "#004225",
+          "#0B5A35",
+          "#C21F3A",
+          "#DCE6D5",
+          "#FFF8E7",
+          "#FFFFFF",
+        ];
+        for (let i = 0; i < 150; i++) {
+          const a = -Math.PI / 2 + (Math.random() - 0.5) * 1.9,
+            v = 7 + Math.random() * 10;
+          bits.push({
+            x,
+            y,
+            vx: Math.cos(a) * v,
+            vy: Math.sin(a) * v,
+            r: Math.random() * 6.3,
+            vr: (Math.random() - 0.5) * 0.3,
+            s: 6 + Math.random() * 6,
+            c: cols[i % cols.length],
+            cap: i % 15 === 0,
+            life: 0,
+          });
+        }
+        if (!fxRaf) fxRaf = requestAnimationFrame(fxTick);
+      }
+      function fxTick() {
+        cx.clearRect(0, 0, innerWidth, innerHeight);
+        bits = bits.filter((p) => p.y < innerHeight + 40 && p.life < 420);
+        for (const p of bits) {
+          p.life++;
+          p.vy += 0.28;
+          p.vx *= 0.985;
+          p.vy *= 0.985;
+          p.x += p.vx;
+          p.y += p.vy;
+          p.r += p.vr;
+          cx.save();
+          cx.translate(p.x, p.y);
+          cx.rotate(p.r);
+          if (p.cap) {
+            cx.font = "22px serif";
+            cx.fillText("🎓", -11, 8);
+          } else {
+            cx.scale(1, Math.cos(p.life * 0.18 + p.r));
+            cx.fillStyle = p.c;
+            cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+          }
+          cx.restore();
+        }
+        fxRaf = bits.length ? requestAnimationFrame(fxTick) : 0;
+      }
+    </script>
+  </body>
 </html>
